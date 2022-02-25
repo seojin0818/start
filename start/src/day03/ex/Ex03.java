@@ -1,6 +1,6 @@
 package day03.ex;
 
-public class EX03 {
+public class Ex03 {
 	/*
  	문제 3]
  
