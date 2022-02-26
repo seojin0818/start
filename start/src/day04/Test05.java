@@ -32,7 +32,7 @@ public class Test05 {
 		String result = (no % 2 == 0) ? "짝수" : "홀수";
 		// () ? () : ();
 		
-		// 3) 출력한다.
+		// 3) 내용을 출력한다.
 		System.out.println("1 ~ 25 사이의 랜덤하게 발생된 숫자 " + no + " 는 " + result + " 입니다.");
 		// String은 변경이 많이 없는 데이터를 쓰는게 좋음 - 메모리를 많이 차지하기 때문에
 		// System.out.println(내용);
