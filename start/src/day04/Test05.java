@@ -21,18 +21,22 @@ package day04;
  */
 public class Test05 {
 	public static void main(String[] args) {
+	// 진입점 함수
+		
 		// 할 일
-		// 랜덤하게 숫자 만들고
+		// 1) 랜덤으로 숫자를 만든다.
 		
 		int no = (int)(Math.random() * (25 - 1 + 1) + 1);
 		
-		// 숫자 판별하고
+		// 2) 숫자를 판별한다.
 		String result = (no % 2 == 0) ? "짝수" : "홀수";
-		// () ? () : (); 헷갈리면 형식 만들고 채워 나가기
+		// () ? () : ();
 		
-		// 출력하고
+		// 3) 출력한다.
 		System.out.println("1 ~ 25 사이의 랜덤하게 발생된 숫자 " + no + " 는 " + result + " 입니다.");
-		// String 은 변경이 많이 없는 데이터를 쓰는게 좋음 - 메모리를 많이 차지해서
+		// String은 변경이 많이 없는 데이터를 쓰는게 좋음 - 메모리를 많이 차지하기 때문에
+		// System.out.println(내용);
+		// 내용 출력 + 줄 바꿈
 		
 				
 	}
