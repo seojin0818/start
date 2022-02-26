@@ -22,7 +22,8 @@ import java.util.Scanner;
 			// 할 일
 			// 1) 입력 도구 준비
 			Scanner sc = new Scanner(System.in);
-			// 2) 입력 메세지 출력
+			
+			// 2) 입력 받기 전에 입력 메세지 출력
 			System.out.print("원의 반지름 : ");
 			// System.out.print(내용);
 			// 내용 출력 + 줄 바꿈 x
@@ -31,14 +32,17 @@ import java.util.Scanner;
 			int rad = sc.nextInt();
 			// int 변수 = sc.nextInt();
 			
+			// 4) 입력 메세지 출력
 			System.out.println("입력된 원의 반지름 : " + rad);
 			// System.out.println(내용);
 			// 내용 출력 + 줄 바꿈
 			
+			// 5) 계산
 			double width = rad * rad * 3.14;
 			double around = 2 * rad * 3.14;
 			// 3.14는 소수점이 있으므로 double형으로 계산
 			
+			// 6) 최종 메세지 출력
 			System.out.println("원의 반지름 : " + rad);
 			System.out.println("원의 넓이 : " + width);
 			System.out.println("원의 둘레 : " + around);
