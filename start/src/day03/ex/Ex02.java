@@ -2,35 +2,47 @@ package day03.ex;
 
 	/*
 	 	문제 2 ]
+		
 	 		하나의 숫자를 입력받은 후 (원의 반지름)
 	 		그 숫자를 이용해서 원의 넓이와 둘레를 계산하고 출력하세요.
 	 		
-	 		참고 ]
-	 			원의 넓이 : 반지름 * 반지름 * 3.14
-	 			원의 둘레 : 2 * 반지름 * 3.14
+	 	참고 ]
+		
+	 		원의 넓이 : 반지름 * 반지름 * 3.14
+	 		원의 둘레 : 2 * 반지름 * 3.14
 	 */
-	import java.util.Scanner;
+
+import java.util.Scanner;
+// 이렇게 사용할 클래스의 경로를 지정하면 java.util 패키지 하위에 바로 속한 클래스만 사용할 준비를 하게 됨
+
 	public class Ex02 {
 		public static void main(String[] args) {
+		// 진입점 함수
+			
+			// 할 일
+			// 1) 입력 도구 준비
 			Scanner sc = new Scanner(System.in);
+			// 2) 입력 메세지 출력
 			System.out.print("원의 반지름 : ");
+			// System.out.print(내용);
+			// 내용 출력 + 줄 바꿈 x
 			
-			int ban = sc.nextInt();
+			// 3) 정수 형태로 입력 받기
+			int rad = sc.nextInt();
+			// int 변수 = sc.nextInt();
 			
-			System.out.println("입력된 원의 반지름 : " + ban);
+			System.out.println("입력된 원의 반지름 : " + rad);
+			// System.out.println(내용);
+			// 내용 출력 + 줄 바꿈
 			
-			double width = (ban * ban * 3.14);
-			double dul = (2 * ban * 3.14);
+			double width = rad * rad * 3.14;
+			double around = 2 * rad * 3.14;
+			// 3.14는 소수점이 있으므로 double형으로 계산
 			
+			System.out.println("원의 반지름 : " + rad);
 			System.out.println("원의 넓이 : " + width);
-			System.out.println("원의 둘레 : " + dul);
+			System.out.println("원의 둘레 : " + around);
  }
-
-	
-	// 이렇게 사용할 클래스의 경로를 지정하면 java.util 패키지 하위에 바로 속한 클래스만 사용할 준비를 하게 됨
-	// 이 예제의 경우는 Scanner 를 사용할 예정인데 직접 * 대신 Scanner 로 명시해도 됨
-
-	// 적용 순서는 * 보다는 클래스 이름을 명시하는 방법을 우선 적용시킴
 
 	/*
 	 	A - abcd.txt
@@ -39,7 +51,7 @@ package day03.ex;
 	 	B - abcd.txt
 	 		xyz.txt
 	 		
-	/* 강사님 풀이
+	/* 강사님 풀이 ]
 	 * 
 	 */
 	// 할 일
@@ -60,6 +72,7 @@ package day03.ex;
 	System.out.println("반지름 : " + rad);
 	System.out.println("넓  이 : " + area);
 	System.out.println("둘  레 : " + around);
+	// 한글은 2칸을 차지
 	
 	
 	/*
