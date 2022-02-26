@@ -25,9 +25,6 @@ public class Test04 {
 		double height = 165.;
 		// double형은 소수점이 있는 실수형에서 쓰기 때문에 .을 찍어준다.
 		
-		
-		System.out.println("'가' > '나' : " + ('가' > '나'));
-		
 		// 내용 출력
 		System.out.println("이름 : " + name);
 		System.out.println("나이 : " + age);
@@ -35,6 +32,8 @@ public class Test04 {
 		System.out.println("키 : " + height);
 		// System.out.println(내용);
 		// 내용 출력 + 줄 바꿈
+		
+		System.out.println("'가' > '나' : " + ('가' > '나'));
 	}
 	
 }
