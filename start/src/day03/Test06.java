@@ -28,6 +28,5 @@ public class Test06 {
 		// System.out.println(내용);
 		// 내용 출력 + 줄 바꿈
 		
-		
 	}
 }

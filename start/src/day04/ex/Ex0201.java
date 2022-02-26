@@ -33,7 +33,7 @@ public class Ex0201 {
 	// 특수문자 - A ~ Z - 특수문자 - a ~ z - 특수문자
 	String result = (ch >= 'A' && ch <= 'Z') ? ("대문자") : ("소문자");
 	
-	// 6) 결과 출력
+	// 6) 최종 출력
 	System.out.println("입력 받은 알파벳은 " + result + " 입니다.");
 	
 }

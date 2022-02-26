@@ -36,7 +36,7 @@ public class Ex01 {
 		// 1) 입력 도구 준비
 		Scanner sc = new Scanner(System.in);
 		
-		// 2) 입력 받기 전에 입력 메세지 
+		// 2) 입력 받기 전에 입력 메세지 출력
 		System.out.print("가로 : ");
 		// System.out.print(내용);
 		// 내용 출력 + 줄 바꿈 x
@@ -81,7 +81,7 @@ public class Ex01 {
 		// 혹은 double samgak = width * sero * 0.5;
 		// 혹은 double samgak = width * sero / (double)2;
 		
-		// 6) 최종 메세지 출력
+		// 6) 최종 출력
 		System.out.println("사각형 넓이 : " + sagak);
 		System.out.println("삼각형 넓이 : " + samgak);
 		

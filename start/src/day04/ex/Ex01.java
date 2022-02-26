@@ -22,7 +22,7 @@ public class Ex01 {
 		int max;
 		max = (no1 > no2 && no1 > no3) ? no1 : (no2 > no3) ? no2 : no3;
 		
-		// 3) 출력
+		// 3) 최종 출력
 		System.out.println("1 ~ 25 사이의 랜덤하게 발생된 숫자 중 가장 큰 수는 " + max + "입니다.");
 		
 		

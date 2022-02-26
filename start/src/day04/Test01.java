@@ -29,10 +29,10 @@ public class Test01 {
 		// System.out.print(내용);
 		// 내용 출력 + 줄 바꿈 x
 		
-		// 3) 입력 받고 정수를 변수에 기억 시킨다.
+		// 3) 입력 받고 정수를 변수에 기억 시키기
 		int num = sc.nextInt();
 		
-		// 4) 조건에 따라서 판별한다.
+		// 4) 조건에 따라 판별
 		String soo = "[영]";
 		
 		// 홀수인 경우
@@ -45,7 +45,7 @@ public class Test01 {
 			soo = "짝수";
 		}
 		
-		// 5) 내용을 출력한다.
+		// 5) 최종 출력
 		System.out.println("입력 받은 정수 : " + num + " 은 " + soo + "입니다.");
 		// Systsem.out.println(내용);
 		// 내용 출력 + 줄 바꿈

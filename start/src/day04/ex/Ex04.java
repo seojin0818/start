@@ -28,7 +28,7 @@ public class Ex04 {
 		// 2) 판별
 		String result = (num % 4 == 0 || num % 100 != 0 && num % 400 == 0) ? ("윤년") : ("평년");
 		
-		// 3) 출력
+		// 3) 최종 출력
 		System.out.println("입력 받은 숫자 " + num + " 은 " + result + " 입니다.");
 		
 	}

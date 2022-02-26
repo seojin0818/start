@@ -42,7 +42,7 @@ import java.util.Scanner;
 			double around = 2 * rad * 3.14;
 			// 3.14는 소수점이 있으므로 double형으로 계산
 			
-			// 6) 최종 메세지 출력
+			// 6) 최종 출력
 			System.out.println("원의 반지름 : " + rad);
 			System.out.println("원의 넓이 : " + width);
 			System.out.println("원의 둘레 : " + around);

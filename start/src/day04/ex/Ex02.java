@@ -55,7 +55,7 @@ public class Ex02 {
 		// 5) 판별 (판별 결과는 변수에 담아서 처리)
 		char result = (ch < 'A') ? (ch) : (ch <= 'Z') ? ((char)(ch + ('a' - 'A'))) : (ch < 'a') ? (ch) : (ch <= 'z') ? ((char)(ch - ('a' - 'A'))) : (ch);
 		
-		// 결과 출력하고
+		// 6) 최종 출력
 		System.out.println("입력한 문자 : " + ch);
 		System.out.println("변환된 문자 : " + result);
 		

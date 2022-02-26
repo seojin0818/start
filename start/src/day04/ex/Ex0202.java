@@ -30,7 +30,7 @@ public class Ex0202 {
 		// 특수문자 - 숫자 - 대문자 - 소문자
 		String result = (ch >= 'a' & ch <= 'z') ? ("소문자") : (ch >= 'A' & ch <= 'Z') ? ("대문자") : ("숫자");
 		
-		// 6) 출력
+		// 6) 최종 출력
 		System.out.println("입력 받은 데이터는 " + result + " 입니다.");
 		
 		
