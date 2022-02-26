@@ -31,9 +31,9 @@ public class Test04 {
 		System.out.println("이름 : " + name);
 		System.out.println("나이 : " + age);
 		System.out.println("첫문자 : " + sijak);
-		System.out.println("기럭지 : " + height);
+		System.out.println("키 : " + height);
 		// System.out.println(내용);
-		// 내용 출력 + 줄바꿈
+		// 내용 출력 + 줄 바꿈
 	}
 	
 }
