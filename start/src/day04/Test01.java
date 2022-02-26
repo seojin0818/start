@@ -23,12 +23,15 @@ public class Test01 {
 		// 할일
 		// 1) 입력 도구 준비
 		Scanner sc = new Scanner(System.in);
+		
 		// 2) 입력 받기 전에 입력 메세지 출력
 		System.out.print("정수 입력 : ");
 		// System.out.print(내용);
 		// 내용 출력 + 줄 바꿈 x
+		
 		// 3) 입력 받고 정수를 변수에 기억 시킨다.
 		int num = sc.nextInt();
+		
 		// 4) 조건에 따라서 판별한다.
 		String soo = "[영]";
 		
