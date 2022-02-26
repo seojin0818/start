@@ -11,10 +11,13 @@ package day02;
  */
 public class Test01 {
 	
-	// 진입점 함수
 	public static void main(String[] args) {
+	// 진입점 함수
+		
 		// 여기는 한줄 주석
 		System.out.println("한줄 주석 작성 끝");
+		// System.out.println(내용);
+		// 내용 출력 + 줄 바꿈
 		
 		// 다시 한줄 주석 System.out.println("다시 한줄 주석");
 		
