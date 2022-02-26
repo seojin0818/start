@@ -1,6 +1,7 @@
 package day03.ex;
 
 	/*
+	
  	문제 1 ]
 	
  		두개의 숫자를 입력 받은 후(가로, 세로)
@@ -101,7 +102,6 @@ public class Ex01 {
  
  삼각형 넓이 출력
  System.out.println("삼각형 넓이 : " + samgak);
- 
  
 	*/	
 	}
