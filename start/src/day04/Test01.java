@@ -42,7 +42,7 @@ public class Test01 {
 			soo = "짝수";
 		}
 		
-		// 내용 출력하고
+		// 5) 내용을 출력한다.
 		System.out.println("입력 받은 정수 : " + num + " 은 " + soo + "입니다.");
 		// Systsem.out.println(내용);
 		// 내용 출력 + 줄 바꿈
