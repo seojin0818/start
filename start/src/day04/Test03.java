@@ -11,6 +11,8 @@ public class Test03 {
 		// ==> 5
 		
 		System.out.println("result : " + result);
+		// System.out.println(내용);
+		// 내용 출력 + 줄 바꿈
 		
 		result = result << 3; 
 		// 2의 3승을 곱한 값
