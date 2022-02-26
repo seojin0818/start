@@ -36,31 +36,31 @@ import java.util.*;
 
 public class Ex02 {
 	public static void main(String[] args) {
+	// 진입점 함수
+		
 		// 할 일
-		// 입력 도구 준비
+		// 1) 입력 도구 준비
 		Scanner sc = new Scanner(System.in);
-		// 입력 메세지 출력
+		
+		// 2) 입력 메세지 출력
 		System.out.print("문자 입력 : ");
 		
-		// 입력 받아 문자열 저장하고
+		// 3) 입력 받은 문자열 저장
 		String str = sc.nextLine();
 		
-		// 문자열에서 문자 추출하고
+		// 4) 문자열에서 문자 추출
 		char ch = str.charAt(0);
 		System.out.println("문자 : " + ch);
 		
-		// 판별하고 (판별 결과는 변수에 담아서 처리하자)
-		char result = (ch < 'A') ? (ch) : (
-					(ch <= 'Z') ? ((char)(ch + ('a' - 'A'))):
-							(ch < 'a') ? (ch) : (
-									(ch <= 'z') ? (char)(ch - ('a' - 'A')) : ch
-											)
-									);
+		// 5) 판별 (판별 결과는 변수에 담아서 처리)
+		char result = (ch < 'A') ? (ch) : (ch <= 'Z') ? ((char)(ch + ('a' - 'A'))) : (ch < 'a') ? (ch) : (ch <= 'z') ? ((char)(ch - ('a' - 'A'))) : (ch);
 		
 		// 결과 출력하고
 		System.out.println("입력한 문자 : " + ch);
 		System.out.println("변환된 문자 : " + result);
 		
-		
+		// 대문자 - 소문자 변환
+		// char ch2 = (char)((ch >= 'a' && ch <= 'z') ? ch - ('a' - 'A') : ch + ('a' - 'A') );
+
 	}
 }

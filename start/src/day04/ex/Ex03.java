@@ -9,12 +9,18 @@ package day04.ex;
  		출력해주는 프로그램을 작성하세요.
  		
  		참고 ]
+ 		
  			게시물이 없는 경우는
  			게시물이 없는 페이지가 적어도 1페이지는 필요하다.
  			
  */
 public class Ex03 {
 	public static void main(String[] args) {
-		
-	}
+	// 진입점 함수
+				
+			// 할 일
+			// 1) 게시물 수 랜덤으로 발생시키기
+			int no = (int)(Math.random() * (300 - 1 + 1) + 1);
+			
+	}	
 }

@@ -1,4 +1,7 @@
 package day04.ex;
+
+import java.util.*;
+// // 이렇게 사용할 클래스의 경로를 지정하면 java.util 패키지 하위에 바로 속한 클래스만 사용할 준비를 하게 됨
 /*
  	문제 4]
  	
@@ -13,6 +16,21 @@ package day04.ex;
  					400으로 나누어 떨어지는 해
  					(400으로 나누어 떨어지고 4로 나누어 떨어지는데 100으로 나누어지지 않는)
  */
+
 public class Ex04 {
+	public static void main(String[] args) {
+	// 진입점 함수
+			
+		// 할 일
+		// 1) 1000 ~ 3000 사이의 숫자를 랜덤으로 생성
+		int num = (int)(Math.random() * (3000 - 1000 + 1) + 1000);
+		
+		// 2) 판별
+		String result = (num % 4 == 0 || num % 100 != 0 && num % 400 == 0) ? ("윤년") : ("평년");
+		
+		// 3) 출력
+		System.out.println("입력 받은 숫자 " + num + " 은 " + result + " 입니다.");
+		
+	}
 
 }
