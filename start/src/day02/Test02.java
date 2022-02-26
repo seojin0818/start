@@ -2,6 +2,8 @@ package day02;
 
 public class Test02 {
 	public static void main(String[] args) {
+	// 진입점 함수
+		
 		// 문자열 변수를 만드는 방법
 		
 		// 1. 데이터를 직접 입력해서 만드는 방법
