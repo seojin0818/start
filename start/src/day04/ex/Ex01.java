@@ -11,7 +11,7 @@ package day04.ex;
 public class Ex01 {
 	public static void main(String[] args) {
 		// 할 일
-		// 1 ~ 25 의 숫자 3개 랜덤 발생시키기
+		// 1) 1 ~ 25 의 숫자 3개 랜덤 발생시키기
 		int no1 = (int)(Math.random() * (25 - 1 + 1) + 1);
 		int no2 = (int)(Math.random() * (25 - 1 + 1) + 1);
 		int no3 = (int)(Math.random() * (25 - 1 + 1) + 1);
@@ -19,7 +19,7 @@ public class Ex01 {
 		// 3개 중 가장 큰 수만 출력하려면?
 		// () ? () : ();
 		
-		// 출력하기
+		// 출력
 		System.out.println("1 ~ 25 사이의 랜덤하게 발생된 숫자 중 가장 큰 수는 " + "입니다.");
 		
 		
