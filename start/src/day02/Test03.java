@@ -54,7 +54,7 @@ public class Test03 {
 		  	만들어진 변수가 기억하는 데이터를 재사용하는데 있음
 		 */
 		
-		// 내용 출력
+		// 3) 내용을 출력한다.
 		System.out.println("제니의 나이 : " + age);
 		// System.out.println(내용);
 		// 내용 출력 + 줄 바꿈
