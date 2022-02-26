@@ -12,10 +12,17 @@ public class Test04 {
 	 		자신의 이름, 나이, 이름 첫문자, 키를 변수에 기억시키고 출력하세요.
 	 */
 	public static void main(String[] args) {
+		// 진입점 함수
+		
+		// 할 일
+		// 1. 이름, 나이, 이름 첫문자, 키의 데이터 타입을 정한다.
+		// 이름은 문자열이므로 String, 나이는 숫자이므로 정수형 (기본 타입 int), 이름 첫문자는 문자이므로 char, 키는 숫자이므로 정수형도 되지만 실수형으로 만들어보자.
+		// 변수를 만들고 변수 초기화로 데이터를 기억시킨다.
 		String name = "백서진";
 		int age = 27;
 		char sijak = '백';
 		double height = 165.;
+		// double형은 소수점이 있는 실수형에서 쓰기 때문에 .을 찍어준다.
 		
 		
 		System.out.println("'가' > '나' : " + ('가' > '나'));
@@ -25,7 +32,8 @@ public class Test04 {
 		System.out.println("나이 : " + age);
 		System.out.println("첫문자 : " + sijak);
 		System.out.println("기럭지 : " + height);
-		
+		// System.out.println(내용);
+		// 내용 출력 + 줄바꿈
 	}
 	
 }
