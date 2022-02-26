@@ -25,7 +25,7 @@ public class Test04 {
 		double height = 165.;
 		// double형은 소수점이 있는 실수형에서 쓰기 때문에 .을 찍어준다.
 		
-		// 내용 출력
+		// 4) 내용을 출력한다.
 		System.out.println("이름 : " + name);
 		System.out.println("나이 : " + age);
 		System.out.println("첫문자 : " + sijak);
