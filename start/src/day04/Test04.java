@@ -31,7 +31,7 @@ public class Test04 {
 		String result = (num % 2 == 0) ? ("짝수") : ("홀수");
 		// () ? () : ();
 		
-		// 5) 출력한다.
+		// 5) 내용을 출력한다.
 		System.out.println("입력 받은 숫자 [ " + num + " ] 은 ' " + result +  " ' 입니다.");
 		// System.out.println(내용);
 		// 내용 출력 + 줄 바꿈
