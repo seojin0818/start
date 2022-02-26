@@ -36,7 +36,7 @@ public class Ex01 {
 		// 1) 입력 도구 준비
 		Scanner sc = new Scanner(System.in);
 		
-		// 2) 입력 도구에 입력한 메세지 출력
+		// 2) 입력 받기 전에 입력 메세지 
 		System.out.print("가로 : ");
 		// System.out.print(내용);
 		// 내용 출력 + 줄 바꿈 x
