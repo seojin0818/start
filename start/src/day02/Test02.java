@@ -13,7 +13,7 @@ public class Test02 {
 		System.out.println("name2 : " + name2);
 		System.out.println("name1 == name2 : " + (name1 == name2));
 		//System.out.println(내용);
-		// 내용 출력 + 줄바꿈
+		// 내용 출력 + 줄 바꿈
 		// 클래스를 new 시키면 주소가 다르기 때문에 name1과 naem2는 같지 않다.
 		
 	}	
