@@ -7,6 +7,7 @@ package day03;
  		형식 ]
  			
  			문자열.equals(비교할 문자열)
+			
  */
 public class Test06 {
 	public static void main(String[] args) {
