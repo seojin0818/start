@@ -53,7 +53,7 @@ public class Test03 {
 		// 내용 출력
 		System.out.println("제니의 나이 : " + age);
 		// System.out.println(내용);
-		// 내용 출력 + 줄바꿈
+		// 내용 출력 + 줄 바꿈
 		
 	}
 }
