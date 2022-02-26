@@ -25,7 +25,7 @@ public class Test07 {
 		// 같은 영역 안에서 같은 이름의 변수는 만들 수 없으므로 ch1
 		char ch1 = (char)num;
 		
-		// 4) 출력한다.
+		// 4) 내용을 출력한다.
 		System.out.println("'a'보다 5번째 이후 문자 : " + ch1);
 		// System.out.println(내용);
 		// 내용 출력 + 줄 바꿈
