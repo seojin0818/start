@@ -11,6 +11,7 @@ package day05;
 
 import java.util.*;
 //이렇게 사용할 클래스의 경로를 지정하면 java.util 패키지 하위에 바로 속한 클래스만 사용할 준비를 하게 됨
+
 public class Test02 {
 
 	public static void main(String[] args) {
@@ -33,13 +34,17 @@ public class Test02 {
 		if(no == 0) { // 동등연산자 == 는 논리값 발생
 			result = "0"; // no == 0 이 아닐 경우의 조건은 실행 x
 		}
+		
 		/* 
+		
 		if문 : 조건이 맞을때에만 실행문을 실행할 조건문
 		
 		if (조건식){실행문}
+		
 			*/
 		
 		/*
+		
 		if(no != 0 && no % 2 == 0) { //짝수인 경우
 			result = "짝수";
 		}
@@ -47,6 +52,7 @@ public class Test02 {
 		if(no != 0 && no % 2 != 0) { // 홀수인 경우
 			result = "홀수";
 		}
+		
 		*/
 			
 		if(no != 0) {

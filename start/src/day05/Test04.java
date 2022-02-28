@@ -1,4 +1,5 @@
 package day05;
+
 /*
  	
  	나이를 입력 받아서
@@ -13,6 +14,7 @@ package day05;
  	으로 구분해서 출력하세요.
  	
  */
+
 import java.util.*;
 //이렇게 사용할 클래스의 경로를 지정하면 java.util 패키지 하위에 바로 속한 클래스만 사용할 준비를 하게 됨
 
@@ -53,6 +55,7 @@ public class Test04 {
 			sage = "장년층";
 		}
 		/*
+		
 		다중 if(if-else if)문 : 조건이 두 개 이상일 경우 각 경우에 따라 실행 명령을 지정해 놓은 조건문
 		
 		if(조건식 1){
@@ -66,7 +69,9 @@ public class Test04 {
 		else {
 			모든 조건에 맞지 않을때 실행문
 		}
+		
 		 */
+		
 		// 5) 최종 출력
 		System.out.println("입력한 나이 " + age + " 는 " + sage + " 입니다.");
 		
