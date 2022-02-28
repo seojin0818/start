@@ -5,7 +5,6 @@ import java.util.Scanner;
 
 public class Ex0201 {
 
-
 /*
 
 	1. 알파벳을 입력 받아서
@@ -15,7 +14,7 @@ public class Ex0201 {
 	public static void main(String[] args){
 	// 진입점 함수
 		
-	// 문제 1번 할 일
+	// 할 일
 	// 1) 입력 도구 준비
 	Scanner sc = new Scanner(System.in);
 	

@@ -28,10 +28,10 @@ public class Ex03 {
 			// no % 15 == 0 이면 no / 15
 			// no % 15 != 0 이면 (no / 15) + 1
 			
-			// 판별
+			// 3) 판별
 			int result = (no % 15 == 0) ? (no1) : (no2);
 			
-			// 최종 출력
+			// 4) 최종 출력
 			System.out.println("게시물 수는 " + no + "이고 필요한 페이지 수는 " + result + " 입니다.");
 			
 	}	
