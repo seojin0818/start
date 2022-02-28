@@ -20,20 +20,24 @@ public class Ex01 {
 		int hap = 0;
 		
 		// 2) 반복해서 누적 대입하기
-		for(int i = 0 ; i < 10 ; i++ ) {
+		for(int i = 0 ; i < 10 ; i++) {
 			hap = hap + (i + 1);
 		}
 		
 		// 3) 최종 출력
 		System.out.println("1 ~ 10 까지의 합은 " + hap + " 입니다.");
 		
+		/*
+		
 		int gop = 1;
-		for(int i = 0 ; i < 10 ; i++ ) {
-			gop = gop * (i+1);
+		
+		for(int i = 0 ; i < 10 ; i++) {
+			gop = gop * (i + 1);
 		}
+		
 		System.out.println("1 ~ 10 까지의 곱은 " + gop + " 입니다.");
 		
+		*/
 	}
 }
-
-
+		

@@ -1,4 +1,5 @@
 package day05.ex;
+
 /*
 
 	문제 13 ]
@@ -14,10 +15,11 @@ package day05.ex;
 		위 문제가 해결되면 최소공배수를 구하는 문제로 풀어보세요.
 		
 */
+
 public class Ex13 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	// 진입점 함수
 
 	}
 

@@ -1,4 +1,5 @@
 package day05.ex;
+
 /*
 	문제 8 ]
 	

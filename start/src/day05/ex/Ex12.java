@@ -1,4 +1,5 @@
 package day05.ex;
+
 /*
 	문제 12 ]
 	
@@ -14,10 +15,11 @@ package day05.ex;
 			가 동일한 수를 말한다.
 			
 */
+
 public class Ex12 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	// 진입점 함수
 
 	}
 

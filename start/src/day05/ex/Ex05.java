@@ -1,4 +1,5 @@
 package day05.ex;
+
 /*
  
 	문제 5 ]
@@ -12,6 +13,7 @@ package day05.ex;
 		누가 이겼는지를 확인하는 프로그램을 작성하세요.
 	
 */
+
 public class Ex05 {
 
 	public static void main(String[] args) {

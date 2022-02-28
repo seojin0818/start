@@ -1,4 +1,5 @@
 package day05.ex;
+
 /*
 
 문제 14 ]
@@ -11,10 +12,11 @@ package day05.ex;
 	4. 4자리 숫자를 역순으로 하고 그 수와 4자리수를 합하면 16456이 된다.
 	
 */
+
 public class Ex14 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	// 진입점 함수
 
 	}
 

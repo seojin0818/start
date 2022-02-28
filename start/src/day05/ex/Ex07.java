@@ -1,13 +1,18 @@
 package day05.ex;
+
 /*
 	문제 7 ]
+
 
 	
 		5자리의 숫자를 입력한 후
 		각자리의 수의 합을 구하는 프로그램을 작성하세요.
 		
 */
+
 import java.util.*;
+//이렇게 사용할 클래스의 경로를 지정하면 java.util 패키지 하위에 바로 속한 클래스만 사용할 준비를 하게 됨
+
 public class Ex07 {
 
 	public static void main(String[] args) {

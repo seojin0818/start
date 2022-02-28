@@ -1,4 +1,5 @@
 package day05.ex;
+
 /*
 
 	문제 9 ]
@@ -11,7 +12,7 @@ package day05.ex;
 public class Ex09 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	// 진입점 함수
 
 	}
 

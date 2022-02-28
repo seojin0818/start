@@ -1,4 +1,5 @@
 package day05.ex;
+
 /*
  
 	문제 11 ]
@@ -10,10 +11,11 @@ package day05.ex;
 		사이의 숫자이다.
 		
 */
+
 public class Ex11 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	// 진입점 함수
 
 	}
 

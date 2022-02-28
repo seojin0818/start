@@ -9,11 +9,19 @@ public class Test11 {
 		
 		int dan = 5;
 		
-		for(int i = 0; i < 9 ; i++ ) {
+		for(int i = 0 ; i < 9 ; i++) {
 			int gop = (i + 1);
 			
 			if(gop == 5) {
 				continue;
+			/*
+			 
+			 continue 명령
+			 반복문을 다음 회차로 다시 반복
+			 가장 가까운 반복문을 다시 실행
+			 continue 다음에 레이블이 붙을 경우 해당 레이블이 붙은 반복문의 다음회차로 진행
+			 
+			 */
 			}
 			
 			System.out.println(dan + " x " + gop + " = " + (dan * gop));

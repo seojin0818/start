@@ -1,4 +1,5 @@
 package day05.ex;
+
 /*
 
 	문제 6 ]
@@ -18,10 +19,11 @@ package day05.ex;
 		횟수도 같이 출력되게 하세요.
 		
 */
+
 public class Ex06 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	// 진입점 함수
 
 	}
 
