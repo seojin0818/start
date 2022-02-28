@@ -39,17 +39,20 @@ public class Test09 {
 		System.out.println();
 		
 		int no = 1;
-		while(true) {
+		while(true){
+			
 			/*
 			
 			if(no > 50) {
 				break;
 			}
 				참고 ]
+				
 					블럭의 내용이 명령 하나만 기술되는 경우는
 					{} 생략 가능
 					
 			 */
+			
 			if(no > 50) break;
 			System.out.print(no + ", ");
 			// 증감식
