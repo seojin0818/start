@@ -19,8 +19,7 @@ public class Ex04 {
 	public static void main(String[] args) {
 	// 진입점 함수
 		
-		/*
-		 강사님 풀이 ]
+		/* 강사님 풀이 ]
 		 
 		 0.2426은 일 단위
 		 0.2426에 24를 곱하면 시간이 되고
@@ -29,7 +28,7 @@ public class Ex04 {
 		 
 		 */
 		/*
-		 * 
+		
 		// 할 일
 		
 		  데이터 변수에 기억

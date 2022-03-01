@@ -10,6 +10,7 @@ package day04.ex;
  		단, if 문을 사용해서 처리하세요.
  		
  */
+
 public class Ex01_01 {
 
 	public static void main(String[] args) {

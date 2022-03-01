@@ -19,12 +19,12 @@ public class Test04 {
 		// 1) 입력 도구 준비
 		Scanner sc = new Scanner(System.in);
 		
-		// 2) 입력 받기 전에 입력 메세지 출력
+		// 2) 입력 받기 전 입력 메세지 출력
 		System.out.print("정수 입력 : ");
 		// System.out.print(내용);
 		// 내용 출력 + 줄 바꿈 x
 		
-		// 3) 입력 받아서 변수에 기억 시키기
+		// 3) 입력 받아서 변수에 기억시키기
 		int num = sc.nextInt();
 		
 		// 4) 짝수인지 홀수인지 판별

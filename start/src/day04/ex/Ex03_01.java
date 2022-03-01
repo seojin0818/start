@@ -1,6 +1,7 @@
 package day04.ex;
 
 public class Ex03_01 {
+	
 /*
   	
   	문제 3 ]
@@ -19,31 +20,32 @@ public class Ex03_01 {
  		단, if 문을 사용해서 처리하세요.
  		
  */
+	
 	public static void main(String[] args) {
 	// 진입점 함수
 		
 		// 할 일
-					// 1) 랜덤으로 게시물 수 생성
-					int no = (int)(Math.random() * (300 - 1 + 1) + 1);
+		// 1) 랜덤으로 게시물 수 생성
+		int no = (int)(Math.random() * (300 - 1 + 1) + 1);
 					
-					// 2) 변수 생성
-					int no1 = no / 15;
-					int no2 = (no / 15) + 1;
-					// no % 15 == 0 이면 no / 15
-					// no % 15 != 0 이면 (no / 15) + 1
+		// 2) 변수 생성
+		int no1 = no / 15;
+		int no2 = (no / 15) + 1;
+		// no % 15 == 0 이면 no / 15
+		// no % 15 != 0 이면 (no / 15) + 1
 					
-					// 3) 판별
-					int result;
+		// 3) 판별
+		int result;
 					
-					if(no % 15 == 0) {
-						result = no1;
+		if(no % 15 == 0) {
+		result = no1;
 						
-					} else {
-						result = no2;
-					}
+		} else {
+		result = no2;
+		}
 					
-					// 4) 최종 출력
-					System.out.println("필요한 페이지 수는 " + result + " 입니다.");
+		// 4) 최종 출력
+		System.out.println("필요한 페이지 수는 " + result + " 입니다.");
 
 	}
 

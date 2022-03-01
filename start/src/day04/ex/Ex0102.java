@@ -9,6 +9,7 @@ package day04.ex;
  		단, 3항 연산자를 사용해서 처리하세요.
  		
  */
+
 public class Ex0102 {
 	public static void main(String[] args) {
 	// 진입점 함수

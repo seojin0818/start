@@ -1,7 +1,5 @@
 package day04.ex;
 
-import java.util.Scanner;
-
 /*
  
  1. 알파벳을 입력 받아서
@@ -10,6 +8,8 @@ import java.util.Scanner;
 	단, if 문을 사용해서 처리하세요.
 	
  */
+import java.util.*;
+// 이렇게 사용할 클래스의 경로를 지정하면 java.util 패키지 하위에 바로 속한 클래스만 사용할 준비를 하게 됨
 public class Ex0201_01 {
 
 	public static void main(String[] args) {

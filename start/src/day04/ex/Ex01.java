@@ -1,7 +1,5 @@
 package day04.ex;
 
-import java.util.Scanner;
-
 /*
  	문제 1 ]
  	
@@ -10,8 +8,13 @@ import java.util.Scanner;
  		
  		단, 3항 연산자를 사용해서 처리하세요.
  */
+
+import java.util.*;
+// 이렇게 사용할 클래스의 경로를 지정하면 java.util 패키지 하위에 바로 속한 클래스만 사용할 준비를 하게 됨
+
 public class Ex01 {
 	public static void main(String[] args) {
+		
 		// 할 일
 		// 1) 1 ~ 25 의 숫자 3개를 랜덤으로 생성
 		int no1 = (int)(Math.random() * (25 - 1 + 1) + 1);
@@ -26,8 +29,8 @@ public class Ex01 {
 		System.out.println("1 ~ 25 사이의 랜덤하게 발생된 숫자 중 가장 큰 수는 " + max + "입니다.");
 		
 		
-	/* 강사님 풀이
-	 * 
+	/* 강사님 풀이 ]
+
 	 	1) 랜덤한 정수 3개 발생시키기
 	 	int no1 = (int)(Math.random() * (25 - 1 + 1) + 1);
 	 	
@@ -47,12 +50,11 @@ public class Ex01 {
 		3) 출력
 		System.out.println("입력한 세 정수 \n\t" + no1 + "," + no2 + ", " + no3 + " \n 중 제일 큰 수는 " + max + 입니다.);
 		
-		
 			참고 ] 
+			
 				문자열을 표현할 때 문자열 안에 " 기호를 출력하는 방법
-				==>
-					\"
-				이 때 사용한 \를 이스케이프문자 라고 함
+				==> \"
+				이 때 사용한 \를 이스케이프 문자 라고 함
 				
 				많이 사용하는 문자들
 				
@@ -62,5 +64,6 @@ public class Ex01 {
 					\t - tab 을 표현
 					\b - backspace
 	 */
+		
 }
 }

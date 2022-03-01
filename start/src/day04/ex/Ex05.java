@@ -1,5 +1,6 @@
 package day04.ex;
-// // 이렇게 사용할 클래스의 경로를 지정하면 java.util 패키지 하위에 바로 속한 클래스만 사용할 준비를 하게 됨
+// 이렇게 사용할 클래스의 경로를 지정하면 java.util 패키지 하위에 바로 속한 클래스만 사용할 준비를 하게 됨
+
 /*
  	문제 5 ]
  		
@@ -13,12 +14,13 @@ package day04.ex;
  			777		은 800에 가까우므로 23을 더해야함
  			
  */
+
 public class Ex05 {
 	public static void main(String[] args) {
 	// 진입점 함수
 
 			
-/* 강사님 풀이
+/* 강사님 풀이 ]
  
  	public static void main(String[] args){
  	진입점 함수

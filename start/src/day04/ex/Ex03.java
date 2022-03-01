@@ -1,4 +1,5 @@
 package day04.ex;
+
 /*
  	문제 3 ]
  	
@@ -14,6 +15,7 @@ package day04.ex;
  			게시물이 없는 페이지가 적어도 1페이지는 필요하다.
  			
  */
+
 public class Ex03 {
 	public static void main(String[] args) {
 	// 진입점 함수
