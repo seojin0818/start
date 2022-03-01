@@ -2,6 +2,7 @@ package day02;
 
 public class Test06 {
 /*
+ 
   	문제 ] 
   
   		3.14를 강제 형변환을 이용해서
