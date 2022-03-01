@@ -10,11 +10,32 @@ package day05.ex;
 	
 */
 
+import java.util.*;
+
 public class Ex08 {
 
 	public static void main(String[] args) {
-	// 진입점 함수
+	// 진입점 함수			
+		
+		// 할 일
+		// 1) 입력 도구 준비
+		Scanner sc = new Scanner(System.in);
+		
+		// 2) 입력 받기 전 입력 메세지 출력
+		System.out.print("5자리 숫자 입력 : ");
+		
+		// 3) 입력 받은 데이터를 기억시키기
+		int num = sc.nextInt();
+		
+		int no = 0;
+		int sum = 0;
+		
+		while(num != 0) {
+			sum += num % 10;
+			num /= 10;
+		}
+		
+		
+		}
 
 	}
-
-}

@@ -24,7 +24,32 @@ public class Ex06 {
 
 	public static void main(String[] args) {
 	// 진입점 함수
-
+		
+		/*	
+		
+		1) 숫자를 랜덤으로 생성
+		int no = (int)(Math.random() * (25 - 1 + 1) + 1);
+		
+		Switch(jin) {
+		
+		case 1 :
+			System.out.println("down");
+			System.out.print("다시 입력해 주세요!");
+		break;
+		
+		case 2 :
+			System.out.println("up");
+			System.out.print("다시 입력해 주세요!");
+		break;
+		
+		default;
+		break;
+		
+		System.out.println("정답입니다! 정답은 : " + no + " 였습니다.");
+		System.out.println("업다운 게임을 종료합니다.");
+		
+		// 
+*/
 	}
 
 }

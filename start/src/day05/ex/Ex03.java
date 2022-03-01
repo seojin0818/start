@@ -27,7 +27,7 @@ public class Ex03 {
 			Scanner sc = new Scanner(System.in);
 			
 			// 2) 입력 받기 전 입력 메세지 출력
-			System.out.print("문자 입력 : ");
+			System.out.print("문자열 입력 : ");
 			// System.out.print(내용);
 			// 내용 출력 + 줄 바꿈 x
 			
@@ -38,15 +38,12 @@ public class Ex03 {
 			int no = str.length();
 			
 			// 5) 문자열에서 문자 추출
-			char ch = str.charAt(0);
-			int ch1 = 0;
-			for(int j = 0 ; j < ch1 ; j++) {
+			// char ch = str.charAt(0);
+			// for(char j = 0 ; j < ch ; j++) {
 				
 				for(int i = 0 ; i < no ; i++) {
-				System.out.println(( i + 1) + " 번째 문자 추출 : " + (j + 1));
+				System.out.println((i + 1) + " 번째 문자 추출 : ");
+				
 				}
 			}
 	}
-}
-
-
