@@ -28,7 +28,7 @@ public class Test05 {
 		System.out.println("no3 : " + no3);
 		// System.out.println(내용);
 		// 내용 출력 + 줄 바꿈
-		
+		 
 		// ==>  no1 : 11
 		// ==>  no2 : 20
 		// ==>	no3 : 30

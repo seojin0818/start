@@ -1,6 +1,7 @@
 package day03.ex;
 
 public class Ex04 {
+	
 	/*
 	
 	문제 4]
@@ -13,6 +14,7 @@ public class Ex04 {
  		365.2426일은 단위가 일 단위이다.
  		하루는 24시간이다.
  		따라서 0.5일은 12시간을 의미한다.
+ 		
  */
 	public static void main(String[] args) {
 	// 진입점 함수
@@ -58,12 +60,12 @@ public class Ex04 {
 		// 주의) 전체 계산한 결과를 int로 바꿔야하니까 전체 괄호
 		// int tsec = (int) (0.2426일 * 24시간 * 60분 * 60초)
 		
-		// 시간 구하고 --> 누적 변수에 계산해서 업데이트
+		// 시간 구하고 -> 누적 변수에 계산해서 업데이트
 		int hour = tsec / 60 / 60;
 		tsec = tsec % (60 * 60);
 		// tsec %= 3600;
 		
-		// 분 구하고 --> 누적 변수에 계산해서 업데이트
+		// 분 구하고 -> 누적 변수에 계산해서 업데이트
 		int min = tsec / 60;
 		tsec = tsec % 60;
 		

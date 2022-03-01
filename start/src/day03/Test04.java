@@ -13,7 +13,7 @@ public class Test04 {
 		System.out.println("no1 * no2 = " + (no1 * no2));
 		System.out.println("no1 / no2 = " + (no1 / no2));
 		System.out.println("no1 % no2 = " + (no1 % no2));
-		
+		 
 		// System.out.println(내용);
 		// 내용 출력 + 줄 바꿈
 		

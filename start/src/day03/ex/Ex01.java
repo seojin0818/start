@@ -36,24 +36,28 @@ public class Ex01 {
 		// 1) 입력 도구 준비
 		Scanner sc = new Scanner(System.in);
 		
-		// 2) 입력 받기 전에 입력 메세지 출력
+		// 2) 입력 받기 전 입력 메세지 출력
 		System.out.print("가로 : ");
 		// System.out.print(내용);
 		// 내용 출력 + 줄 바꿈 x
 		
 		/*
-		 * 문자열로 입력받아서 처리하는 방법
+		
+		문자열로 입력받아서 처리하는 방법
 		
 		String garo = sc.nextLine(); 
 		// 문자열로 입력받는 방법
 		// Integer.parseInt(문자열);
 		// 정수 형태의 문자열을 정수로 변환하는 방법
 		int width = Integer.parseInt(garo);
+		
 		*/
 		
 		/*
+		 
 		 정수로 입력 받는 방법
 		 int 변수이름 = sc.nextInt();
+		 
 		 */
 		
 		int width = sc.nextInt();
@@ -75,7 +79,7 @@ public class Ex01 {
 		System.out.println("입력된 정수 세로 : " + sero);
 		
 		// 5) 계산
-		// 삼각형은 2분의 1 (=0.5) 이므로 소수점 형식의 double형을 사용한다. 이 때 .을 붙여준다.
+		// 삼각형은 2분의 1 (=0.5) 이므로 소수점 형식의 double형 사용 ! 이 때 .을 붙여줌
 		int sagak = width * sero;
 		double samgak = width * sero / 2.0;
 		// 혹은 double samgak = width * sero * 0.5;
@@ -97,7 +101,7 @@ public class Ex01 {
  double samgak = width * sero * 0.5
  double sagmak = width * sero / 2 
  ==> 정수 나누기 정수는 정수인데
- double 형태로 나와야하니까 .만 써도 double 형태가 된다.
+ double 형태로 나와야하니까 .만 써도 double 형태가 됨
  double samgak = width * sero / (double)2;
  double samgak = width * sero * 2.0;
  

@@ -28,6 +28,6 @@ public class Test03 {
 		// System.out.println(내용);
 		// 내용 출력 + 줄 바꿈
 		String msg = "'J' 이후의 열번째 문자 : " + (char)(('J' + 10));
-		
+
 	}
 }
