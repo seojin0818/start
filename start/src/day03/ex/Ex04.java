@@ -16,6 +16,7 @@ public class Ex04 {
  		따라서 0.5일은 12시간을 의미한다.
  		
  */
+	
 	public static void main(String[] args) {
 	// 진입점 함수
 		
