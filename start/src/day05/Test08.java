@@ -48,6 +48,7 @@ public class Test08 {
 		// 향상된 for 명령으로 처리해보자.
 		for(int no : num) {
 			System.out.println("### " + no);
+			
 		/*
 		 
 		 향상된 for 명령 : 시퀀스 자료형(인덱스가 있는 자료형)에서 유용하게 쓸 수 있는 반복 명령 
@@ -59,6 +60,7 @@ public class Test08 {
 		 }
 		 
 		 */
+			
 		}
 	}
 }

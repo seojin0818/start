@@ -19,6 +19,14 @@ public class Ex05 {
 	public static void main(String[] args) {
 	// 진입점 함수
 
+		// 할 일
+		// 1) 1 ~ 3 사이의 숫자 랜덤으로 3개 생성
+		int no1 = (int)(Math.random() * (3 - 1 + 1) + 1);
+		int no2 = (int)(Math.random() * (3 - 1 + 1) + 1);
+		int no3 = (int)(Math.random() * (3 - 1 + 1) + 1);
+		
+		// 최종 출력
+		System.out.println();
 	}
 
 }
