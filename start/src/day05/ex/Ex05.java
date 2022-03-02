@@ -11,22 +11,98 @@ package day05.ex;
 		사용자는 키보드를 이용해서 1 ~ 3 사이의 숫자를 입력하도록 한다.
 	
 		누가 이겼는지를 확인하는 프로그램을 작성하세요.
-	
+		
+		풀이 ]
+		
+			컴퓨터 - 사람으로 계산하면 ?
+		
+					컴퓨터
+					1		2		3
+		사람	1	0		1		2
+				2	-1		0		1
+				3	-2		-1		0
+				
+					비긴 경우 결과값 			0
+					컴퓨터가 이긴 경우 결과값 	1, -2
+					사람이 이긴 경우 결과값 	-1, 2
+					
 */
+
+import java.util.*;
 
 public class Ex05 {
 
 	public static void main(String[] args) {
 	// 진입점 함수
 
-		// 할 일
-		// 1) 1 ~ 3 사이의 숫자 랜덤으로 3개 생성
-		int no1 = (int)(Math.random() * (3 - 1 + 1) + 1);
-		int no2 = (int)(Math.random() * (3 - 1 + 1) + 1);
-		int no3 = (int)(Math.random() * (3 - 1 + 1) + 1);
-		
-		// 최종 출력
-		System.out.println();
-	}
 
-}
+	/* 강사님 풀이 ]
+	
+	// 할 일
+	// 1) 입력 도구 준비
+	Scanner sc = new Scanner(System.in);
+	
+	while(true){
+	// 2) 입력 받기 전 입력 메세지 출력
+	System.out.print("가위는 1, 바위는 2, 보는 3을 입력하세요!\n게임 종료는 0을 입력하세요!");
+	
+	// 3) 입력 받아 변수에 기억시키기
+	int saram = sc.nextInt();
+	System.out.println("********************");
+	// 입력된 숫자가 종료 숫자면 바로 종료시킴
+	if(saram == 0){
+		sc.close(); // 스캐너 닫고 자원 반환 해주기
+		break;
+	}
+	// 컴퓨터와 사람의 코드에 따라서 가위, 바위, 보를 기억할 변수
+	String sstr = "가위";
+	switch(saram) {
+	case 1:
+		sstr = "가위";
+		break;
+	case 2:
+		sstr = "바위";
+		break;
+	case 3:
+		sstr = "보";
+		break;
+	default:
+		continue; // 밑에 실행 안하고 다시 처음 while로 가서 재실행시킴
+		
+		// 4) 랜덤으로 숫자 생성
+		int samtl = (int)(Math.random() * 3 + 1);
+		
+		String comstr = "가위"; //  samtl이 1이면 해당되는게 없으니까 초기 설정해놓은 가위를 사용
+		switch(samtl) {
+		case 2:
+			comstr = "바위";
+			break;
+		case 3:
+			comstr = "보";
+			break;
+	}
+		
+	// 5) 계산해서 결과값 만들기
+	int result = samtl - saram;
+	
+	// 6) 조건에 따라서 결과 출력
+	
+	String msg = "비";
+	if (result == 1 || result == -2) {
+		msg = "컴퓨터가 이";
+		System.out.println("컴퓨터는 " + comstr + " 사람은 " + sstr + " 로 컴퓨터가 이겼습니다.");
+	} else if(result == 2 || result == -1) {
+		msg = "사람이 이";
+		System.out.println("컴퓨터는 " + comstr + " 사람은 " + sstr + " 로 사람이 이겼습니다.");
+	} else {
+		System.out.println("컴퓨터는 " + comstr + " 사람은 " + sstr + " 로 비겼습니다.");
+	}
+		System.out.println("컴퓨터는 " + comstr + " \n사람은 " + sstr + " 로\n*** " + msg + "겼습니다. ***");
+		System.out.println("-------------------------------------------");
+	}
+	System.out.println("##### 게임을 종료합니다. #####");
+	
+	*/
+		
+	}
+	}

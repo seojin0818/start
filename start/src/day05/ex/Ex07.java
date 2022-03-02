@@ -6,6 +6,12 @@ package day05.ex;
 		5자리의 숫자를 입력한 후
 		각자리의 수의 합을 구하는 프로그램을 작성하세요.
 		
+		힌트 ]
+		
+			***** % 10 ==> 마지막 자리만 꺼냄
+			***** / 10 ==> ****
+				<------
+				
 */
 
 import java.util.*;
@@ -21,20 +27,26 @@ public class Ex07 {
 			Scanner sc = new Scanner(System.in);
 			
 			// 2) 입력 받기 전 입력 메세지 출력
-			System.out.print("5자리 숫자 입력 : ");
+			System.out.print("5자리 정수 입력 : ");
 			
 			// 3) 입력 받은 데이터를 기억시키기
-			int num = sc.nextInt();
+			int no = sc.nextInt();
 			
-			int no = 0;
 			int sum = 0;
+			int tmp = no; // 밖에서 선언해놓고
 			
-			while(num != 0) {
-				sum += num % 10;
-				num /= 10;
+			// 4) 반복해서 합 구하기
+			for(int i = 0 ; i < 5 ; i++) { // 안에서 변경해나감
+				sum = sum + tmp % 10;
+				tmp = tmp / 10;
+			}
+			
+			// 5) 최종 출력
+			System.out.println("입력한 수 " + no + " 의 각 자리수의 합은 " + sum + " 입니다.");
+
 			}
 			
 			
 			}
-	}
+
 

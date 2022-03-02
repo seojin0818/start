@@ -18,38 +18,52 @@ package day05.ex;
 		
 		횟수도 같이 출력되게 하세요.
 		
+		단, 입력횟수가 5번을 초과하는 순간 컴퓨터의 승리로 처리하고 프로그램이 종료되게 하세요.
+		
 */
+
+import java.util.*;
 
 public class Ex06 {
 
 	public static void main(String[] args) {
 	// 진입점 함수
 		
-		/*	
-		
-		1) 숫자를 랜덤으로 생성
-		int no = (int)(Math.random() * (25 - 1 + 1) + 1);
-		
-		Switch(jin) {
-		
-		case 1 :
-			System.out.println("down");
-			System.out.print("다시 입력해 주세요!");
-		break;
-		
-		case 2 :
-			System.out.println("up");
-			System.out.print("다시 입력해 주세요!");
-		break;
-		
-		default;
-		break;
-		
-		System.out.println("정답입니다! 정답은 : " + no + " 였습니다.");
-		System.out.println("업다운 게임을 종료합니다.");
-		
-		// 
-*/
-	}
+		/* 강사님 풀이 ]
 
-}
+		// 할 일
+		// 1) 입력 도구 준비
+		Scanner sc = new Scanner(System.in);
+		
+		// 2) 랜덤으로 숫자 생성
+		int num = (int)(Math.random() * (100 - 1 + 1) + 1);
+		
+		// 3) 반복해서 처리
+		for(int i = 0 ; i < 5 ; i++) { // 횟수 제한 있으므로 카운터변수가 있는 for문 사용
+			
+		}
+		
+			// 3 - 1 ) 사용자가 숫자를 입력함
+			System.out.print("숫자 입력 : ");
+			int no = sc.nextInt();
+			
+			// 3 - 2 ) 비교해서 결과 보여줌
+			if(no == num) {
+				System.out.println("입력한 수 " + no + " 맞습니다.");
+				// 정답을 맞췄으므로 반복 종료
+				// if(no == num) 이 아니면 실행조차 하지 않음
+				break;
+			} else if(i != 4 && no > num) {
+				System.out.println("큰 수를 입력했습니다.");
+				continue; // continue 만나면 증감식으로 감
+			} else if(i != 4 && no < num) {
+				System.out.println("작은 수를 입력했습니다.");
+			}
+			
+			if(i == 4) {
+				System.out.println("##### 게임에서 졌습니다. #####");
+			}
+			
+			*/
+	}
+	}

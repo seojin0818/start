@@ -16,6 +16,16 @@ public class Ex11 {
 
 	public static void main(String[] args) {
 	// 진입점 함수
+		
+		for(int x = 0 ; x <= 10 ; x++) {
+				
+			for(int y = 0 ; y <= 10 ; y++) {
+				if((2 * x + 4 * y) == 10) {
+					System.out.println("x : " + x + " | y : " + y + " 일 때 성립한다.");
+					
+				}
+			}
+		}
 
 		/*
 		 
