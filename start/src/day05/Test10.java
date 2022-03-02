@@ -11,10 +11,12 @@ public class Test10 {
 			System.out.println("no : " + no);
 //			++no;
 		} while(++no < 10); // 조건식에 맞지 않지만 do-while문이라서 한번은 실행
+							// 어떤 상황이라도 한 번은 실행하는 것이 do-while문의 핵심
 
 	}
 
 }
+
 /*
 
  do-while 명령 : 다른 반복문과 비교해서 최소 한번은 반드시 실행한다는 차이점
