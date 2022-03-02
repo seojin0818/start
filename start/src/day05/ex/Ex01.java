@@ -25,21 +25,27 @@ public class Ex01 {
 		for(int i = 0 ; i < 10 ; i++) {
 			hap = hap + (i + 1);
 		}
-		
+			
 		// 3) 최종 출력
 		System.out.println("1 ~ 10 까지의 합은 " + hap + " 입니다.");
 		
-		/*
-		
-		int gop = 1;
-		
-		for(int i = 0 ; i < 10 ; i++) {
-			gop = gop * (i + 1);
-		}
-		
-		System.out.println("1 ~ 10 까지의 곱은 " + gop + " 입니다.");
-		
-		*/
 	}
 }
+		/*
+		 
+		 1 ~ 10 까지의 곱을 구해서 출력하세요.
+		 
+		 // 할 일
+		 // 1) 결과값 변수 만들기
+		 int gop = 1;
+		 
+		 // 2) 반복해서 누적 대입하기
+		 for(int i = 0 ; i < 10 ; i++) {
+		 	gop = gop * (i + 1);
+		 }
+		 
+		 // 3) 최종 출력
+		 System.out.println("1 ~ 10 까지의 곱은 " + gop + " 입니다.");
+		 
+		 */
 		
