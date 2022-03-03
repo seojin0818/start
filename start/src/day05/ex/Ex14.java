@@ -27,7 +27,6 @@ public class Ex14 {
 
 	public static void main(String[] args) {
 	// 진입점 함수
-
+		
 	}
-
 }
