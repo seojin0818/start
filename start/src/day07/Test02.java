@@ -10,50 +10,45 @@ package day07;
 public class Test02 {
 	
 	public static void main(String[] args) {
+	// 진입점 함수
 		
 		// 할 일
-		// 1) 배열의 주소를 기억할 변수 만들기
+		// 1) 배열 변수 선언
 		int[] lotto;
-		// 2) 배열 만들기
+		
+		// 2) 배열 변수 초기화
 		lotto = new int[6];
 		
+		// 3) 배열 길이 구하기
 		int len = lotto.length;
 		
+		// 4) 출력
 		loop:
-		for(int i = 0 ; i < len ; i++ ) {
-			// 3) 랜덤으로 정수 만들기
+		for(int i = 0 ; i < len ; i++) {
 			int no = (int)(Math.random() * 45 + 1);
-			
-			// 중복검사
-			// 만약 지금 만든 번호가 이전에 이미 만들어진 번호면
-			// 지금 회차를 다시 반복함
-			for(int j = 0 ; j < i ; j++) {
-				// 이전에 만든 번호 추출
-				int tmp = lotto[j];
+			// 랜덤으로 정수 만들기
 				
-				if(no == tmp) {
-					// 이 경우는 지금 만든 번호가 이전 회차에서 이미 만든 번호이므로
-					// 지금 회차를 다시 반복함
+				// 중복검사
+				// 만약 지금 만든 번호가 이전에 이미 만들어진 번호면
+				// 지금 회차를 다시 반복함
+				for(int j = 0 ; j < i ; j++) {
+					// 이전에 만든 번호 추출
+					int tmp = lotto[j];
 					
-					// 회차를 1 감소시켜줌
-					i--;
-					// 다음 회차를 진행함
-					continue loop;
+						if(no == tmp) {
+							// 이 경우는 지금 만든 번호가 이전 회차에서 이미 만든 번호이므로
+							// 지금 회차를 다시 반복함
+							i--;
+							// 회차를 1 감소시켜줌
+							continue loop;
+							// 다음 회차를 진행함
+						}
 				}
-			}
-			
-		// 4) 배열에 채워넣기
-			lotto[i] = no;
+		// 5) 배열에 채워넣기
+		lotto[i] = no;
 		}
-		// 5) 하나씩 꺼내서 출력
-		/*
-		System.out.println(lotto[0]);
-		System.out.println(lotto[1]);
-		System.out.println(lotto[2]);
-		System.out.println(lotto[3]);
-		System.out.println(lotto[4]);
-		System.out.println(lotto[5]);
-		*/
+		
+		// 6) 데이터를 하나씩 꺼내서 출력
 		for(int i = 0 ; i < len ; i++) {
 			System.out.print(lotto[i] + " | ");
 		}

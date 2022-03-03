@@ -12,29 +12,25 @@ import java.util.*;
 public class Test03 {
 	
 	public static void main(String[] args) {
+	// 진입점 함수
+		
+		// 할 일
+		// 1) 배열 변수 선언 및 초기화
 		char[] ch = new char[10];
-		/*
 		
-		 	char ch[];
-		 	ch = new char[10];
-		 	
-		 */
-		
-		// 각 방에 차례로 접근해서 하나씩 문자 채워주기
+		// 2) 각 방에 차례로 접근해서 하나씩 문자 채워주기
 		for(int i = 0 ; i < ch.length ; i++) {
-			// 문자 만들기
 			char munja = (char)('A' + i);
-			// 만들어진 문자를 배열에 채워넣기
 			ch[i] = munja;
-			
 		}
 		
-		// 배열의 내용 확인
+		// 3) 내용 확인용 출력
 		System.out.println(Arrays.toString(ch));
 		
-		// 하나씩 꺼내서 출력
+		// 4) 데이터를 하나씩 꺼내서 출력
 		for(char munja : ch) {
-			System.out.print(munja + " | ");
+			System.out.println(munja + " | ");
+			
 		}
 	}
 }
