@@ -20,12 +20,14 @@ public class Test04 {
 		// 과목 점수를 랜덤으로 만들어 입력하기
 		for(int i = 0 ; i < subj.length ; i++) {
 			// 랜덤하게 만든 점수를 각 과목방에 입력하기
+			
 			/*
 			 
 			 	int score = (int)(Math.random() * (100 - 60 + 1) + 60);
-			 	subj[i] = score;
+			 	subj[i] = score; // subj에 score 데이터를 채워넣음
 			 	
 			 */
+			
 			subj[i] = (int)(Math.random() * (100 - 60 + 1) + 60); // 60 ~ 100 사이의 정수
 		}
 		
