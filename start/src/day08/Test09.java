@@ -19,7 +19,7 @@ package day08;
 		
 		따라서 연산기호가 오는 위치 이전까지 문자열을 잘라서 첫번째에 기억시키고
 		연산기호를 두번째 위치에 기억시키고
-		나머지를 마지막 위치에 기억시켜서 처리
+		나머지를 마지막 위치에 기억시켜서 처리함
 		
  */
 
@@ -31,39 +31,36 @@ public class Test09 {
 	// 진입점 함수
 		
 		// 할 일
-		// 입력 도구 준비
+		// 1) 입력 도구 준비
 		Scanner sc = new Scanner(System.in);
 		
-		// 입력 받기 전 입력 메세지 출력
+		// 2) 입력 받기 전 입력 메세지 출력
 		System.out.print("계산식을 입력하세요! : ");
 		
-		// 입력 받아 기억
+		// 3) 입력 받아서 변수에 기억시키기
 		String str = sc.nextLine();
 		
-		// 배열 준비
+		// 4) 배열 준비하기
 		String[] sik = new String[3];
 		
-		// 배열에 문자열 잘라서 집어넣기
-		int idx = 0; // 연산 기호의 위치값을 기억할 변수
+		// 5) 배열에 문자열 잘라서 집어넣기
+		int idx = 0; // 연산기호의 위치값을 기억할 변수
 		
-		// 반복해서 추출해서 연산 기호의 위치를 찾아냄
-		for(int i = 0 ; i < str.length() ; i++) {
+		// 6) 반복해서 추출해서 연산기호의 위치 찾아내기
+		for(int i = 0 ; i < str.length(); i++) {
 			char ch = str.charAt(i);
 			
-			if(ch < '0' || ch > '9') {
-				// 이 경우 추출한 문자는 숫자형태의 문자가 아니므로
-				// 연산기호에 해당함
+			if(ch > '0' || ch < '9') { // 이 경우 추출한 문자는 숫자형태의 문자가 아니므로 연산기호에 해당
 				idx = i;
 				break;
 			}
-			
 		}
 		
 		sik[0] = str.substring(0, idx);
-		sik[1] = str.substring(idx, idx + 1); // str.charAt(idx) + "" ==> 문자열이 됨
+		sik[1] = str.substring(idx, idx + 1);
 		sik[2] = str.substring(idx + 1);
 		
-		// 계산
+		// 7) 계산
 		int no1 = Integer.parseInt(sik[0]);
 		int no2 = Integer.parseInt(sik[2]);
 		
@@ -71,25 +68,22 @@ public class Test09 {
 		
 		switch(sik[1]) {
 		case "+":
-			result = no1 + no2;
-			break;
-			
+				result = no1 + no2;
+				break;
 		case "-":
-			result = no1 - no2;
-			break;
-			
+				result = no1 - no2;
+				break;
 		case "*":
-			result = no1 * no2;
-			break;
-			
+				result = no1 * no2;
+				break;
 		case "/":
-			result = no1 / (double)no2;
-			break;
+				result = no1 / (double) no2;
+				break;
+			
 		}
 		
-		// 최종 출력
+		// 8) 최종 출력
 		System.out.println("입력한 계산식\n\t" + str + "\n의 결과는 \n\t" + result);
-
 	}
-
 }
+

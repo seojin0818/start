@@ -10,10 +10,13 @@ package day08;
 public class Test06 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	// 진입점 함수
 		
 		// 이름을 기억할 배열 만들기
-		String[] haribo = new String[4];
+		String[] haribo;
+//		System.out.println(Arrays.toString(haribo)); ==> 아직 변수만 준비한 상태
+		
+		haribo = new String[4];
 		// 문자열 데이터를 기억할 공간만 확보한 상태
 		// 각 방은 null 상태
 		

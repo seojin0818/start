@@ -3,7 +3,7 @@ package day08;
 public class Test10 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	// 진입점 함수
 		
 		int[] no = new int[10];
 		

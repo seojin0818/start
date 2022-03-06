@@ -123,7 +123,7 @@ String 배열
 		
 		방법 ]
 		
-			toCharArray0();
+			toCharArray();
 			
 		ex ]
 		
