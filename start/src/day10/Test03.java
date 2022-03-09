@@ -3,13 +3,16 @@ package day10;
 /*
 	
 	Black Pink 멤버의 정보를 기억할 배열을 만들고
-	데이터를 입력하고
+	데이터를 입력한 후
 	완성이 되면 내용을 출력하세요.
 	
 	단, 각 멤버의 정보는 Friend 클래스에 기억시키도록 함
 	
  */
+
 public class Test03 {
+	
+	// 변수 선언 ①
 	String[] names;
 	String[] tels;
 	String[] email;
@@ -19,15 +22,14 @@ public class Test03 {
 	String addrs;
 	
 	public Test03() {
-		// 멤버변수들 초기화
+		// 멤버변수들 초기화 ③
 		setData();
-		
 		// 필요한 데이터들이 준비된 상태
 		
-		// 각 멤버를 배열 하나로 관리하기
+		// 각 멤버를 배열 하나로 관리하기 ④
 		Friend[] black = getBlack();
 		
-		// 내용 출력
+		// 내용 출력 ⑧
 		for(Friend f : black) {
 			System.out.println(f);
 			// 이렇게 하면 Friend 클래스에 재정의한 toString() 함수가 자동호출됨
@@ -60,7 +62,7 @@ public class Test03 {
 		}
 	}
 	// 준비된 데이터를 Friend[] 타입의 데이터로 만들어서 반환해주는 함수
-	public Friend[] getBlack() {
+	public Friend[] getBlack() { // ⑤
 		// 이 함수는 Friend[] 배열을 만들고
 		Friend[] anne = new Friend[4]; // 아직 각 방에 Friend 타입의 객체는 들어있지 않고 기억할 공간만 확보한 상태
 		
@@ -73,7 +75,7 @@ public class Test03 {
 		
 		// 위의 반복문이 종료가 되면 각 방에 있는 객체의 변수에 데이터를 입력할 수 있는 상태가 됨
 		
-		// 데이터를 채워서
+		// 데이터를 채워서 ⑥
 		for(int i= 0 ; i < anne.length ; i++) {
 			Friend f = anne[i];
 			String name = names[i];
@@ -85,11 +87,11 @@ public class Test03 {
 			f.setGen(gen);
 		}
 		
-		// 채워진 배열을 반환해주기
+		// 채워진 배열을 반환해주기 ⑦
 		return anne;
 	}
 	
-	// 각 데이터를 초기화 시켜주는 함수
+	// 각 데이터를 초기화 시켜주는 함수 ②
 	public void setData() {
 		names = new String[] {"제니", "리사", "로제", "지수"};
 		tels = new String[] {"010-1111-1111", "010-2222-2222", "010-3333-3333", "010-4444-4444"};

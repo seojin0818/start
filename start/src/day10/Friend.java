@@ -106,7 +106,7 @@ public class Friend {
 
 	@Override
 	public String toString() {
-		return "Friend [name=" + name + ", addr=" + addr + ", tel=" + tel + ", mail=" + mail + ", birth=" + birth
+		return "name=" + name + ", addr=" + addr + ", tel=" + tel + ", mail=" + mail + ", birth=" + birth
 				+ ", age=" + age + ", gen=" + gen + "]";
 	}
 	

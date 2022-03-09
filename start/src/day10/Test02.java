@@ -31,16 +31,41 @@ public class Test02 {
 		*/
 		
 		System.out.println(f1.toString());
-		
+			
 		// 로제 객체
 		Friend f2 = new Friend();
+		f2.setName("로제");
+		f2.setAddr("ygM");
+		f2.setBirth("1998/05/05");
+		f2.setMail("rose@githrd.com");
+		f2.setTel("010-3333-3333");
+		f2.setAge(26);
+		f2.setGen('F');
+		
+		System.out.println(f2.toString());
 		
 		// 리사 객체
 		Friend f3 = new Friend();
+		f3.setName("리사");
+		f3.setAddr("ygM");
+		f3.setBirth("1996/04/05");
+		f3.setTel("010-2222-2222");
+		f3.setAge(28);
+		f3.setGen('F');
+		
+		System.out.println(f3.toString());
 		
 		// 지수 객체
 		Friend f4 = new Friend();
+		f4.setName("지수");
+		f4.setAddr("ygM");
+		f4.setBirth("1997/07/07)");
+		f4.setTel("010-4444-4444");
+		f4.setAge(27);
+		f4.setGen('F');
 		
+		System.out.println(f4.toString())
+		;
 		// 네 멤버를 하나의 변수로 관리해보자.
 		Friend[] black = new Friend[4];
 		// 이렇게 하면 Friend 타입의 데이터를 기억할 공간 4개를 확보한 상태이기만 함

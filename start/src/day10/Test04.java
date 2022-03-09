@@ -1,6 +1,10 @@
 package day10;
 
+// Friend[] black 이 전역변수일 경우
+
 public class Test04 {
+	
+	// 변수 선언 ①
 	String[] names;
 	String[] tels;
 	String[] email;
@@ -13,14 +17,15 @@ public class Test04 {
 	
 	public Test04() {
 		// 데이터 변수들 세팅하고
-		setData();
+		setData(); // ③
 		// 배열 완성하고
-		setBlack();
+		setBlack(); // ⑤
 		// 출력
-		toPrint();
+		toPrint(); // ⑥
 	}
+	
 	// Friend 배열 내용 출력해주는 함수
-	public void toPrint() {
+	public void toPrint() { // ⑦
 	// 이 함수가 호출되면 전역변수 black의 내용을 출력할 일이 있을 때이므로
 	// 별도로 데이터를 입력받지 않아도 배열에 접근 가능
 		for(int i = 0 ; i < black.length ; i++) {
@@ -43,7 +48,8 @@ public class Test04 {
 		}
 	}
 	
-	public void setBlack() {
+	public void setBlack() { // ④
+		// 이미 있는 변수이므로 반환값 없음
 		// 데이터 기억할 공간 확보하고
 		black = new Friend[4];
 		
@@ -68,7 +74,7 @@ public class Test04 {
 		}
 	}
 	
-	// 각 데이터를 초기화 시켜주는 함수
+	// 각 데이터를 초기화 시켜주는 함수 ②
 	public void setData() {
 		names = new String[] {"제니", "리사", "로제", "지수"};
 		tels = new String[] {"010-1111-1111", "010-2222-2222", "010-3333-3333", "010-4444-4444"};
