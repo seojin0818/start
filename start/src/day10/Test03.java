@@ -89,6 +89,7 @@ public class Test03 {
 		
 		// 채워진 배열을 반환해주기 (7번)
 		return anne;
+	
 	}
 	
 	// 각 데이터를 초기화 시켜주는 함수 (2번)
@@ -104,7 +105,7 @@ public class Test03 {
 		nai = new int[] {27, 28, 26, 27};
 		gen = 'F';
 		addrs = "ygM";
-	
+
 	}
 	
 	public static void main(String[] args) {
