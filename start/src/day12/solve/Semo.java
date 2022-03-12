@@ -14,17 +14,17 @@ public class Semo extends Figure {
 	
 	@Override
 	public void setArea() {
-		
-	area = width * height / 2.0;
+	
+		area = width * height / 2.0;
 		
 	}
 
 	@Override
 	public void toPrint() {
-	
-	System.out.printf("이 삼각형의 밑변은 %3d이고 높이는 %3d이고 면적은 %6.2f 입니다.", width, height, area);
-		
+		System.out.printf("이 삼각형은 밑변이 %3d 이고 높이가 %3d 이고 면적이 %6.2f 입니다." , width, height, area);
+		System.out.println();
 	}
+	
 	public int getWidth() {
 		return width;
 	}
@@ -43,5 +43,4 @@ public class Semo extends Figure {
 	public void setArea(double area) {
 		this.area = area;
 	}
-	
 }

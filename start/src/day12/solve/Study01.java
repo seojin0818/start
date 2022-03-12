@@ -18,6 +18,7 @@ public class Study01 {
 	
 	public Study01() {
 		setFig();
+		figPrint();
 	}
 	
 	// fig 배열의 내용을 출력해주는 함수 (5)

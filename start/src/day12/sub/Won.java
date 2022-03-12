@@ -22,7 +22,7 @@ public class Won implements Figure {
 
 	@Override
 	public void toPrint() {
-		System.out.printf("이 원은 반지름이 %3d 이고 둘레가 %3d 이고 면적이 %6d 입니다.", rad, arround, area);
+		System.out.printf("이 원은 반지름이 %3d 이고 둘레가 %6.2f 이고 면적이 %6.2f 입니다.", rad, arround, area);
 		System.out.println();
 		
 	}

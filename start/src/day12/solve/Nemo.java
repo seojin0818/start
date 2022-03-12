@@ -2,44 +2,53 @@ package day12.solve;
 
 public class Nemo extends Figure {
 
-	private int width, height, area;
+	private int garo, sero, area;
 	
 	public Nemo() {}
-	public Nemo(int width, int height) {
-		this.width = width;
-		this.height = height;
+	
+	public Nemo(int garo, int sero) {
+		this.garo = garo;
+		this.sero = sero;
 		setArea();
-		
 	}
 	
 	@Override
 	public void setArea() {
-
-	area = width * height;
 	
+		area = garo * sero;
+		
 	}
 
 	@Override
 	public void toPrint() {
-	System.out.printf("이 사각형의 가로는 %3d이고 세로는 %3d이고 면적은 %6.2f 입니다.", width, height, area);
+	
+		System.out.printf("이 사각형의 가로는 %3d 이고 세로는 %3d 이고 면적은 %6d 입니다.", garo, sero, area);
+		System.out.println();
 	}
-	public int getWidth() {
-		return width;
+
+	public int getGaro() {
+		return garo;
 	}
-	public void setWidth(int width) {
-		this.width = width;
+
+	public void setGaro(int garo) {
+		this.garo = garo;
 	}
-	public int getHeight() {
-		return height;
+
+	public int getSero() {
+		return sero;
 	}
-	public void setHeight(int height) {
-		this.height = height;
+
+	public void setSero(int sero) {
+		this.sero = sero;
 	}
+
 	public int getArea() {
 		return area;
 	}
+
 	public void setArea(int area) {
 		this.area = area;
 	}
-
+	
 }
+
