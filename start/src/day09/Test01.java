@@ -25,5 +25,5 @@ public class Test01 {
 	public String add(int no, String str) {
 		String result = str + no; // 문자열 + 정수 = 문자열
 		return result;
-}
+	}
 }
