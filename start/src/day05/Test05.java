@@ -12,7 +12,7 @@ package day05;
 	장년층				==> 나머지는 default에서 처리
 	
 으로 구분해서 출력하세요.
-	
+
 */
 
 import java.util.*;
