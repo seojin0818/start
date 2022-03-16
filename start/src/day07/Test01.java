@@ -5,6 +5,7 @@ import java.util.Arrays;
 public class Test01 {
 
 	public static void main(String[] args) {
+		
 		/*
 		
 			정수 6개를 관리할 배열 arr 을 만들고
