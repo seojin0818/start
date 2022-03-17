@@ -81,8 +81,7 @@ public class Student {
 		String ban1 = nam.getBan();
 		String name1 = nam.getName();
 		
-		bool = ban == ban1;
-		bool = name == name1;
+		bool = (ban == ban1) && (name == name1);
 		
 		return bool;
 	}

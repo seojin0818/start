@@ -45,12 +45,16 @@ public class Nemo {
 	@Override
 	public boolean equals(Object o) {
 		boolean bool = false;
-		Nemo nam = (Nemo) o;
+		Nemo nam = null;
+		try {
+			nam = (Nemo) o;
+		} catch(Exception e) {
+			return bool;
+		}
 		int garo = nam.getWidth();
 		int sero = nam.getHeight();
 		
-		bool = width == garo;
-		bool = height == sero;
+		bool = (width == garo) && (height == sero);
 		
 		return bool;
 	}

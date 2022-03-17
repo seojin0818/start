@@ -15,7 +15,7 @@ public class Test03 {
  */
 
 	public Test03() {
-		// 문자열의 변화가 심한 문자열 데이터는 String 타입보다는 StringBuffer 로 결합작업을 하는 것이 유리함
+		// 문자열의 변화가 심한 문자열 데이터는 String 타입보다는 StringBuffer로 결합작업을 하는 것이 유리함
 		
 		// 1. StringBuffer 객체 만들기
 		StringBuffer buff = new StringBuffer();
@@ -58,6 +58,7 @@ public class Test03 {
 				buff.append("	isshow = 'Y');
 				
 				buff.toString()를 호출해서 필요한 순간에 문자열로 반환해주기
+				
 		 */
 	}
 
