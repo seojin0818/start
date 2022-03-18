@@ -42,7 +42,7 @@ public class Test01 {
 		
 		*/
 		
-		for(int i = 0 ; token.hasMoreTokens() /*i < cnt */ ; i++) {
+		for(int i = 0 ; token.hasMoreTokens() /* i < cnt */ ; i++) {
 			tmp[i] = token.nextToken(); // 이 명령을 실행하는 순간 버퍼메모리에서 꺼낸 데이터는 삭제
 		}
 		

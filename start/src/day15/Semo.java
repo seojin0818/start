@@ -36,7 +36,7 @@ public class Semo implements Comparable {
 		// 입력된 데이터를 Semo 타입으로 강제 형변환
 		Semo s = (Semo) o;
 		
-		// 정렬 기준은 높이를 기준으로 내림차순할 예정
+		// 정렬 기준은 높이를 기준으로 내림차순 예정
 		// 내 높이에서 입력된 세모의 높이를 빼주는 작업을 하면 됨
 		int result = height - s.getHeight();
 		

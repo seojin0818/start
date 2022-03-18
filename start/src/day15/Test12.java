@@ -27,7 +27,7 @@ public class Test12 {
 		 
 		 	Set 계열 컬렉션은 데이터를 꺼내는 함수가 존재하지 않음
 		 	따라서 꺼내서 사용해야 할 경우에는
-		 		1. Iterator로 변환 후꺼내서 사용하거나
+		 		1. Iterator로 변환 후 꺼내서 사용하거나
 		 		2. List 계열로 변환 후 하나씩 꺼내서 사용하거나
 		 		
 		 */
@@ -53,8 +53,8 @@ public class Test12 {
 			// 출력
 			System.out.println(name);
 		}
-		
 		System.out.println();
+		
 		System.out.println("2. List 계열로 변환해서 사용하는 방법");
 		// 2. List 계열로 변환해서 사용하는 방법
 		Vector vec = new Vector(set); // set에 저장된 데이터로 Vector를 만듦

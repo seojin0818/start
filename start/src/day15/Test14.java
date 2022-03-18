@@ -48,7 +48,7 @@ public class Test14 {
 			Won w2 = (Won) o2;
 			
 			int result = w1.getRad() - w2.getRad();
-			// 내림차순 정렬 예정이므로 부호를 반전시켜서 반환함
+			// 내림차순 정렬 예정이므로 부호를 반전시켜서 반환
 			return -result;
 			
 			}

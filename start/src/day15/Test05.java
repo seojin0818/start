@@ -6,9 +6,9 @@ public class Test05 {
 
 	public Test05() {
 		Vector vec = new Vector(10, 5); // 처음 공간은 10개, 5개씩 증가시켜라
-		int cap = vec.capacity();	// 현재 확보한 공간 수를 알려주는 함수
-		System.out.println("처음 공간" + cap);
-		for(int i = 0 ; i < 16 ; i ++) {
+		int cap = vec.capacity();	// 현재 확보한 공간의 수를 알려주는 함수
+		System.out.println("처음 공간 : " + cap);
+		for(int i = 0 ; i < 16 ; i++) {
 			// 데이터 채우기
 			vec.add(i + 1);
 		}

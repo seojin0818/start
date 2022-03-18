@@ -4,8 +4,7 @@ public class Won {
 	private int rad;
 	private double arround, area;
 	
-	public Won() {
-	}
+	public Won() {}
 	
 	public Won(int rad) {
 		this.rad = rad;

@@ -22,11 +22,12 @@ public class Test04 {
 		Matcher mat = form.matcher(tel);
 		
 		// 3. 검사 결과에서 형식에 맞는 부분을 꺼내오기
-		//		사용하는 함수 : find() ==> 규칙에 맞는 부분이 확인해주는 함수 / 반환값은 true 또는 false (Boolean Type)
-		//						group() ==> 규칙에 맞는 부분을 반환해주는 함수
+		//		사용하는 함수 : find() : 규칙에 맞는 부분을 확인해주는 함수 / 반환값은 true 또는 false (Boolean Type)
+		//						group() : 규칙에 맞는 부분을 반환해주는 함수
 		
 		if(mat.find()) {
 			String hp = mat.group();
+			
 		// 출력
 			System.out.println("전화번호 : " + hp);
 		}

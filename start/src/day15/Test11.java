@@ -14,9 +14,11 @@ import java.util.*;
 public class Test11 {
 
 	public Test11() {
+		
+		// 리스트 만들기
 		ArrayList list = new ArrayList();
 		
-		// 데이터 추가
+		// 데이터 추가하기
 		for(int i = 0 ; i < 10 ; i++) {
 			Won w = new Won((int)(Math.random() * 21 + 5));
 			// 리스트에 만들어진 원을 각 방에 채워주기
@@ -54,7 +56,7 @@ public class Test11 {
 	}
 
 	public static void main(String[] args) {
-
+		new Test11();
 	}
 
 }

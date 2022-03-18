@@ -6,7 +6,7 @@ public class Test13 {
 	
 /*
 	
-	HashSet에 랜덤하게 숫자 6개를 채워보자.
+	HashSet에 랜덤으로 숫자 6개를 채워보자.
 	
 	Set 계열의 특징
 		1. 입력 순서 보장 안함
@@ -19,7 +19,7 @@ public class Test13 {
 		HashSet set = new HashSet();
 		int count = 1;
 		while(true) {
-			// 랜덤한 정수 만들기
+			// 랜덤으로 정수 만들기
 			int no = (int)(Math.random() * 10 + 1);
 			
 			set.add(no);
