@@ -26,7 +26,7 @@ public class Test01 {
 		
 		// 잘려진 개수 알아내기
 		int cnt = token.countTokens();
-		
+	
 		// 문자열 배열 만들기
 		String[] tmp = new String[cnt]; // tmp 안의 상태는 전부 null 상태 (tmp가 클래스 타입이니까)
 		
