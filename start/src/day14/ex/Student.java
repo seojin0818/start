@@ -10,7 +10,7 @@ public class Student {
 		
 	}
 	
-	public Student(int kook, int young, int soo ,int chong) {
+	public Student(int kook, int young, int soo , int chong) {
 		this.kook = kook;
 		this.young = young;
 		this.soo = soo;
