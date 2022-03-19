@@ -13,11 +13,11 @@ public class Won {
 	}
 	
 	public void setArea() {
-		area = rad * rad * Math.PI;
+		area = rad * rad * 3.14;
 	}
 	
 	public void setArround() {
-		arround = 2 * rad * Math.PI;
+		arround = 2 * rad * 3.14;
 	}
 	
 	public int getRad() {
@@ -37,5 +37,10 @@ public class Won {
 	}
 	public void setArea(double area) {
 		this.area = area;
+	}
+	
+	@Override
+	public String toString() {
+		return "반지름이 " + rad + " 이고, 둘레가 " + arround + " , 면적이 " + area;
 	}
 }

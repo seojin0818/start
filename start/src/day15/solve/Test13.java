@@ -28,7 +28,28 @@ public class Test13 {
 			set.add(no);
 			// 6개의 숫자만 입력할 예정이므로
 			// 채워진 숫자의 개수를 꺼내오기
+			int len = set.size();
+			
+			if(len == 6) {
+				break;
+			}
+			
+			count++;
 		}
+		
+		// 출력
+		// 반복횟수 출력
+		System.out.println("1. 반복횟수 : " + count);
+		
+		// 내용 출력
+		Iterator itor = set.iterator();
+		
+		while(itor.hasNext()) {
+			System.out.print((int) itor.next() + ", ");
+		}
+		
+		System.out.println();
+		
 	}
 
 	public static void main(String[] args) {
