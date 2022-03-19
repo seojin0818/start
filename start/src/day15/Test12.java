@@ -6,7 +6,7 @@ public class Test12 {
 	
 /*
  
- 	블랙핑크 멤버를 HashSet에 저장한 후 꺼내서 출력해보자.
+ 	하리보 멤버를 HashSet에 저장한 후 꺼내서 출력해보자.
  	
  */
 	
@@ -14,10 +14,10 @@ public class Test12 {
 		HashSet set = new HashSet();
 		
 		// 데이터 추가
-		set.add("제니");
-		set.add("리사");
-		set.add("로제");
-		set.add("지수");
+		set.add("곰");
+		set.add("돌");
+		set.add("이");
+		set.add("짱");
 		
 		// 입력된 개수 꺼내오기
 		int len = set.size();
