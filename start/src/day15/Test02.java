@@ -17,7 +17,7 @@ public class Test02 {
 			
 		 */
 		
-		for(int i = 0 ; i < 10 ; i++ ) {
+		for(int i = 0 ; i < 10 ; i++) {
 			int no = rd1.nextInt(100); // 0 ~ 100 사이의 난수를 발생해주세요.
 			
 			// 출력
