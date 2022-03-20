@@ -13,19 +13,19 @@
 			throws하는 예외는 같거나 줄어들 수 있음 (개수)
 			하지만 상위 클래스에서 던지지 않은 예외를 던지면 안 됨
 			
-			예 ]
+		예 ]
 			
-				void add(int a, int b) throws InvalidNumberException, NotANumberException {}
+			void add(int a, int b) throws InvalidNumberException, NotANumberException {}
 				
-				이것을 오버라이드 해서
+			이것을 오버라이드 해서
 				
-				void add(int a, int b) throws InvalidNumberException, NotANumberException {}	==>		O	: 예외를 똑같이 써도 O
+			void add(int a, int b) throws InvalidNumberException, NotANumberException {}	==>		O	: 예외를 똑같이 써도 O
 				
-				void add(int a, int b) throws InvalidNumberException {}			==================>		O	: 예외의 갯수가 줄어드는건 O
+			void add(int a, int b) throws InvalidNumberException {}			==================>		O	: 예외의 갯수가 줄어드는건 O
 				
-				void add(int a, int b) throws Exception {}	======================================>		X 	: 예외의 범위가 넓어지면 X
+			void add(int a, int b) throws Exception {}	======================================>		X 	: 예외의 범위가 넓어지면 X
 				
-				void add(int a, int b) throws NumberException {} =================================>		X	: 상위 클래스의 함수에서 던지지 않은 예외는 X
+			void add(int a, int b) throws NumberException {} =================================>		X	: 상위 클래스의 함수에서 던지지 않은 예외는 X
 
 -------------------------------------------------------------------
 
