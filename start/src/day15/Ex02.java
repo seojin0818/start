@@ -16,6 +16,41 @@ public Ex02() {
 	
 	// TreeSet에 입력하는 데이터는 반드시 정렬가능한 데이터여야 함
 	
+	// 숫자는 대소비교가 돼서 정렬 되므로 Comparable 안 만들어도 됨
+	
+	// 이 경우는 기존 가지고 있는 정렬기준을 바꾸는 작업이 되기 때문에
+	// Comparator를 TreeSet을 만들 때 적용시켜서 만들면 됨
+	
+	/*
+		
+		TreeSet set = new TreeSet(new Comparator(){
+		@Override
+		public int compare(Object o1, Object o2){
+		int reuslt = 0;
+		
+		int no1 = (int) o1;
+		int no2 = (int) o2;
+		
+		result = no1 - no2;
+		
+		return -result;
+		}
+		
+		});
+		
+		while(true){ // 중복된 값이 들어갈 수도 있기 때문에 for문 보다는 while문
+		set.add((int)(Math.random() * 99 + 1));
+		if(set.size() == 10){
+		break;
+		}
+		}
+		
+		Iterator itor = set.iterator();
+		while(itor.hasNext()){
+		System.out.println(itor.next());
+		}
+	 */
+	
 	// TreeSet 만들기
 	TreeSet set = new TreeSet();
 	
