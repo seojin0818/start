@@ -48,7 +48,7 @@ public class Test06 {
 		HashMap tmp = (HashMap) groupMap.get(group);
 		
 		// 이 친구를 맵에 등록하기
-		tmp.put(name,  tel);
+		tmp.put(name, tel);
 	}
 	
 	// 한 사람만 꺼내는 함수

@@ -22,7 +22,7 @@ public class Test09 {
 		// 보관해야할 필요가 생기면 이 데이터를 모두 파일에 기록함
 		FileOutputStream fout = null;
 		try {
-			fout = new FileOutputStream("start/src/day16/result.txt");
+			fout = new FileOutputStream("src/day16/result.txt");
 			// 데이터를 흘려보내기
 			prop.store(fout, "적당히 메세지 쓰세요");
 			// 이 작업이 문제없이 완료되면 이미 파일에 저장되어 있는 상태가 됨
