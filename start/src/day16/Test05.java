@@ -49,7 +49,8 @@ public class Test05 {
 		System.out.println("--------------------");
 		
 		// Map.Entry로 꺼내서 처리하는 방법
-		Set set = map1.entrySet();  // set에는 데이터 객체가 맵에 쌓아둔 개수만큼 있음
+		Set set = map1.entrySet();  
+		// set에는 데이터 객체가 맵에 쌓아둔 개수만큼 있음
 		// Map.Entry는 VO
 		// 추가된 데이터 개수만큼 Map.Entry를 만들어서 Set에 추가해서 반환해줌
 		// Map.Entry 안의 변수는 2개 (키, 밸류)

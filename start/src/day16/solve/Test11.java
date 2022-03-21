@@ -1,16 +1,16 @@
-package day16;
+package day16.solve;
 
 import java.util.*;
 
 public class Test11 {
-
+	
 /*
 
 	blackpink 멤버들의 이름을 기억하는 Set 만들어서 출력해보자.
 	이 때 문자열만 입력되도록 처리하세요.
 	
  */
-	
+
 	public Test11() {
 		HashSet<String> set = new HashSet<String>();
 		// 이 Set은 문자열만 입력 받도록 조치해놓은 Set
@@ -27,18 +27,13 @@ public class Test11 {
 		}
 		
 		// 제너릭스는 전파되지 않음
-		ArrayList blackpink = new ArrayList(set);
+//		ArrayList blackpink = new ArrayList(set);
 		
 		// 따라서 제너릭스 다시 선언
-		
-		/*
-		
 		ArrayList<String> blackpink = new ArrayList<String>(set);
 		for(int i = 0 ; i < blackpink.size(); i++) {
 			System.out.println(blackpink.get(i));
 		}
-		
-		*/
 		
 		Iterator<String> itor = set.iterator();
 		while(itor.hasNext()) {

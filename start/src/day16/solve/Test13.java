@@ -1,29 +1,25 @@
-package day16;
+package day16.solve;
 
 import java.util.*;
 
 public class Test13 {
 
 	public Test13() {
-		ArrayList<Grand> list1 = new ArrayList<Grand>();
-		ArrayList<Father> list2 = new ArrayList<Father>();
-		ArrayList<Son> list3 = new ArrayList<Son>();
-		ArrayList<GrandSon> list4 = new ArrayList<GrandSon>();
-		
-		abc(list1);
-		abc(list2);
-		abc(list3);
-//		abc(list4);
-		
-//		xyz(list1);
-//		xyz(list2);
-		xyz(list3);
-		xyz(list4);
-	}
+	ArrayList<Grand> list1 = new ArrayList<Grand>();
+	ArrayList<Father> list2 = new ArrayList<Father>();
+	ArrayList<Son> list3 = new ArrayList<Son>();
+	ArrayList<GrandSon> list4 = new ArrayList<GrandSon>();
 	
-	public void qwe(ArrayList<?> list) {
-		// ?는 모든 것을 의미해서 Object를 제너릭스로 선언한 것이 됨
-		
+	abc(list1);
+	abc(list2);
+	abc(list3);
+// 	abc(list4);
+	
+//	xyz(list1);
+//	xyz(list2);
+	xyz(list3);
+	xyz(list4);
+	
 	}
 	
 	public void abc(ArrayList<? super Son> list) {
