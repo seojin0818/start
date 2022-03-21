@@ -19,31 +19,27 @@ package day15;
 	import java.util.*;
 
 	public class Ex03 {
-
+		ArrayList names = new ArrayList();
+		
 	public Ex03() {
-		
-		TreeSet set = new TreeSet();
-		
-		while(true) {
-			Student stud = new Student((int)(Math.random() * 9 + 1), (int)(Math.random() * 10 + 1),
-					(int)(Math.random() * 41 + 60), (int)(Math.random() * 41 + 60),
-					(int)(Math.random() * 41 + 60), (int)(Math.random() * 41 + 60));
-			
-			set.add(stud);
-			
-			if(set.size() == 10) {
-				break;
-			}
-		}
-			
-			// 출력
-			ArrayList list = new ArrayList(set);
-			for(Object o : list) {
-				System.out.println(o);
-			}
-		}
-
-	public static void main(String[] args) {
-			new Ex03();
-		}
+			setNames();
 	}
+	
+	public void setNames() {
+		names.add("A");
+		names.add("B");
+		names.add("C");
+		names.add("D");
+		names.add("E");
+		names.add("F");
+		names.add("G");
+		names.add("H");
+		names.add("I");
+		names.add("J");
+	}
+	
+	public static void main(String[] args) {
+		new Ex03();
+	}
+
+}
