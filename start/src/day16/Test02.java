@@ -15,7 +15,7 @@ public class Test02 {
 		table.put("나이", 27);
 		table.put("전화", "010-1111-1111");
 		
-		// 데이터를 거내서 출력
+		// 데이터를 꺼내서 출력
 		System.out.println("이름 : " + table.get("이름"));
 		System.out.println("나이 : " + table.get("나이"));
 		System.out.println("전화 : " + table.get("전화"));
