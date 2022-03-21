@@ -1,21 +1,15 @@
-package day16;
+package day16.solve;
 
 public class Nemo {
 	private int width, height;
 	private double area;
 	
-	public Nemo() {}
-	
 	public Nemo(int width, int height) {
 		this.width = width;
 		this.height = height;
-		setArea();
+		setArea(width * height);
 	}
 
-	public void setArea() {
-		area = width * height;
-	}
-	
 	public int getWidth() {
 		return width;
 	}
@@ -41,12 +35,10 @@ public class Nemo {
 	}
 	
 	// 가로가 같으면 같은 네모로 처리되도록 equals()를 오버라이드
-	
 	@Override
 	public boolean equals(Object o) {
 		boolean bool = false;
 		Nemo nemo = (Nemo) o;
-		
 		bool = width == nemo.getWidth();
 		return bool;
 	}
@@ -56,9 +48,9 @@ public class Nemo {
 		return String.format("이 사각형은 가로가 %3d, 세로가 %3d, 면적이 %6.2f 입니다.", width, height, area);
 	}
 	
-	@Override // java.util - Set interface - hashcode()
+	@Override
 	public int hashCode() {
-		return 1; 
-		// 이 클래스의 객체는 이제부터 모두 해쉬코드 값을 1을 가짐
+		return 1;
+	// 이 클래스의 객체는 이제부터 모두 해쉬코드 값을 1을 가짐
 	}
 }

@@ -1,4 +1,4 @@
-package day16;
+package day16.solve;
 
 public class Student {
 	private String name;
@@ -15,7 +15,6 @@ public class Student {
 		setTotal(java + db + web + spring);
 		setAvg(total / 4.0);
 	}
-	
 	public String getName() {
 		return name;
 	}
@@ -58,10 +57,10 @@ public class Student {
 	public void setAvg(double avg) {
 		this.avg = avg;
 	}
-
+	
 	@Override
 	public String toString() {
-		return String.format("-----------\n이름 : %5s\n자바 : %3d\nDB : %3d\nweb : %3d\nspring : %3d\n총점 : %4d\n평균 : %5.2f\n", 
-				name, java, db, web, spring, total, avg );
+		return String.format("----------\n이름 : %5s\n자바 : %3d\nDB : %3d\nweb : %3d\nspring : %3d\n총점 : %4d\n평균 : %5.2f\n",
+				name, java, db, web, spring, total, avg);
 	}
 }

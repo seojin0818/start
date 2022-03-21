@@ -3,6 +3,7 @@ package day16;
 /*
 	
 	Set 계열의 특징
+	
 		1. 입력 순서 보장 X <== 자기 나름의 정럴규칙을 가지고 정렬해서 보관함
 		2. 중복 데이터 입력을 허용 X
 		
@@ -44,6 +45,4 @@ public class Test01 {
 	public static void main(String[] args) {
 		new Test01();
 	}
-	
-	// 나중에 입력된 데이터보다 먼저 입력된 데이터 기억함 (설명 정정)
 }

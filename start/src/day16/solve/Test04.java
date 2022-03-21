@@ -1,32 +1,38 @@
-package day16;
+package day16.solve;
 
 import java.util.*;
 
 public class Test04 {
 
 /*
- 
- 4명의 학생들의 점수를 맵에 담아서 관리하자.
- 
+ 	
+ 	4명의 학생들의 점수를 맵에 담아서 관리하자.
+ 	
  */
+	
 	public Test04() {
+		
+		// 이름 채워넣기
 		ArrayList names = new ArrayList();
 		names.add("제니");
 		names.add("로제");
 		names.add("리사");
 		names.add("지수");
 		
+		// HashMap 만들기
 		HashMap map = new HashMap();
 		
+		// 데이터 채우기
 		for(int i = 0 ; i < 4 ; i++) {
 			Object key = names.get(i);
-			Student std = new Student((String) key, 
+			Student std = new Student((String) key,
+					(int)(Math.random() * 41 + 60), 
 					(int)(Math.random() * 41 + 60),
-					(int)(Math.random() * 41 + 60),
-					(int)(Math.random() * 41 + 60),
+					(int)(Math.random() * 41 + 60), 
 					(int)(Math.random() * 41 + 60));
 			
 			map.put(key, std);
+		
 		}
 		
 		// 출력
@@ -36,12 +42,11 @@ public class Test04 {
 		
 		for(Object key : list) {
 			Object value = map.get(key);
+			
 			// 출력
-		System.out.println("***" + key + " : " + "***\n" + value);
-		System.out.println();
-		
+			System.out.println("*** " + key  + " ***\n" + value);
+			System.out.println();
 		}
-		
 	}
 
 	public static void main(String[] args) {
