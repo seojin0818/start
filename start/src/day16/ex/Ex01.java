@@ -14,6 +14,20 @@ public class Ex01 {
 	
  */
 	public Ex01() {
+		
+		// HashMap 만들기
+		HashMap map = new HashMap();
+		
+		// 정수 랜덤 발생
+		// int no = (int)(Math.random() * (10 - 5 + 1) + 5);
+		
+		// 키를 모두 추출
+		Set keys = map.keySet();
+		for(Object key : keys) {
+			Object value = map.get(key);
+			System.out.println(key + " : " + value);
+		}
+		
 	}
 
 	public static void main(String[] args) {

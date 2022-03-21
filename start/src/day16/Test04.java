@@ -9,6 +9,7 @@ public class Test04 {
  4명의 학생들의 점수를 맵에 담아서 관리하자.
  
  */
+	
 	public Test04() {
 		ArrayList names = new ArrayList();
 		names.add("제니");

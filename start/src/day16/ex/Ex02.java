@@ -15,6 +15,10 @@ public class Ex02 {
  */
 	
 	public Ex02() {
+		
+		// HashMap 만들기
+		HashMap map = new HashMap();
+		
 	}
 
 	public static void main(String[] args) {
