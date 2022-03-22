@@ -24,8 +24,6 @@ public class Test01 {
 			// 1. 한 글자만 입력해보자.
 			fout.write('j');; // char ==> int 자동 형변환
 			
-			
-			
 			// 2. 여러 글자를 내보내보자.
 			// 문자열 준비
 			String song = "Hey boy\r\nMake 'em whistle like a missile, bomb, bomb";

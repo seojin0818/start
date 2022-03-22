@@ -14,7 +14,7 @@ public class Test03 {
 	public Test03() {
 		// 할 일
 		// 스트림은 단방향
-		// 복사라는 작업은 한곳에서 읽어서 다른 곳에 그대로 읽은 내용을 쓰는 작업
+		// 복사라는 작업은 한곳에서 읽어서 다른 곳에 읽은 내용을 그대로 쓰는 작업
 		// 따라서 스트림이 두개 준비되어야 함
 		FileInputStream fin = null;
 		FileOutputStream fout = null;
