@@ -40,7 +40,7 @@ public class Test02 {
 			
 			// Test01.java 파일을 읽어서 출력해보자.
 			fin = new FileInputStream("src/day17/Test01.java");
-			// 몇 글자를 읽어야 할 지 모르기 때문에 반복해서 처리
+			// 몇 글자를 읽어야할지 모르기 때문에 반복해서 처리
 			// 더 이상 읽을 내용이 없을 때까지 반복해서 처리
 			// 더 이상 읽을 내용이 없는 경우는
 			//		int read(byte[] b)

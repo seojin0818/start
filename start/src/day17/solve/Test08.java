@@ -1,11 +1,11 @@
-package day17;
+package day17.solve;
 
 /*
 
-	파일에 내용을 저장하는 프로그램을 작성하세요.
-	단, BufferedStream을 사용하세요.
-	
- */
+파일에 내용을 저장하는 프로그램을 작성하세요.
+단, BufferedStream을 사용하세요.
+
+*/
 
 import java.io.*;
 
@@ -23,20 +23,21 @@ public class Test08 {
 			
 			// 내용 만들기
 			String str = "Uh, 휘 파람, 파람, 파람 (can you hear that?)";
+			
 			// 내용을 byte 배열로 변환하기
 			byte[] buff = str.getBytes();
+			
 			// 데이터를 보조 스트림에 써주기
 			bout.write(buff);
 			
 			/*
-			 	
+			 
 			 	아직 버퍼가 가득 채워지지 않았으므로
 			 	버퍼의 내용이 fout으로 전달되지 않음
 			 	따라서 저장되지 않음
 			 	
-			 	반드시 습관적으로 작업이 완료된 시점에서
+			 	반드시 습고나적으로 작업이 완료된 시점에서
 			 	버퍼를 비워주는 습관 가지기
-			 	
 			 */
 			
 			bout.flush();

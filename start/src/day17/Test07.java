@@ -27,6 +27,7 @@ public class Test07 {
 		System.out.print("입력해주세요! : ");
 		int ch = 0;
 		try {
+			
 			/*
 			
 			// 1. 한 글자만 읽어보기

@@ -179,7 +179,7 @@ File
 				==> 일반적인 파일의 목록을 알아내는 함수
 				
 			String[] list(FilenameFilter filter)
-			File[] listiles(FileFilter filter)
+			File[] listFiles(FileFilter filter)
 			File[] listFiles(FilenameFilter filter)
 			==> 필터링해서 리스트를 구할 수 있는 함수
 				내가 원하는 파일만 골라서 목록을 구할 수 있음

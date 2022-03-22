@@ -1,4 +1,4 @@
-package day17;
+package day17.solve;
 
 import java.io.*;
 import java.util.*;
@@ -29,11 +29,11 @@ public class Test06 {
 			sc = new Scanner(file);
 			
 			/*
-			
-			// 한 단어만 읽어서 출력
-			String str = sc.next();
-			
-			*/
+				
+				한 단어만 읽어서 출력
+				String str = sc.next();
+				
+			 */
 			
 			// 한 행을 읽어서 출력
 			String str = sc.nextLine();
@@ -41,8 +41,8 @@ public class Test06 {
 			
 		} catch(Exception e) {
 			e.printStackTrace();
-		} 
 		
+		}
 	}
 
 	public static void main(String[] args) {
