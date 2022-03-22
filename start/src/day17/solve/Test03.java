@@ -20,8 +20,8 @@ public class Test03 {
 		
 		try {
 			// 스트림 만들기
-			fin = new FileInputStream("src/day17/heejin.jpg");
-			fout = new FileOutputStream("src/day17/heejin_copy.jpg");
+			fin = new FileInputStream("src/day17/heejin4.jpg");
+			fout = new FileOutputStream("src/day17/heejin4_copy.jpg");
 			// 한 쪽에서 읽어서 그대로 다른곳에 쓰기
 			
 			// 몇 번 읽어야 할지 모르기 때문에
