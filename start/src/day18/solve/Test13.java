@@ -1,4 +1,4 @@
-package day18;
+package day18.solve;
 
 public class Test13 {
 
@@ -9,7 +9,7 @@ public class Test13 {
 		
 		// New Born 상태로 만들기
 		Thread t1 = new Thread(sky);
-		Thread t2= new Thread(blue);
+		Thread t2 = new Thread(blue);
 		
 		// Runnable 상태로 전위
 		t1.start();
@@ -23,11 +23,10 @@ public class Test13 {
 }
 
 class Sky implements Runnable {
-
 	@Override
 	public void run() {
 		for(int i = 0 ; i < 100 ; i++) {
-			System.out.println("하늘씨가 자바를 " + (i + 1) + " 번째 코딩합니다.");
+			System.out.println("하늘씨가 " + (i + 1) + " 번째 코딩합니다.");
 			// 한 번 출력하면 비록 시간이 남았지만
 			// 이번에는 아예 Block 상태로 보냄
 			// 복귀 시간을 정해서 보냄
@@ -36,14 +35,12 @@ class Sky implements Runnable {
 			} catch(Exception e) {}
 		}
 	}
-	
 }
 
 class Blue implements Runnable {
-
 	@Override
 	public void run() {
-		for(int i = 0 ; i < 100 ; i++) {
+		for(int i = 0 ; i < 1000 ; i++) {
 			System.out.println("\t\t푸름씨가 " + (i + 1) + " 번째 복습합니다.");
 			try {
 				Thread.sleep(1000); // 1초 후 Block 상태에서 Runnable 상태로 전위
@@ -51,3 +48,4 @@ class Blue implements Runnable {
 		}
 	}
 }
+

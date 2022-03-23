@@ -1,4 +1,4 @@
-package day18;
+package day18.solve;
 
 public class Test15 {
 
@@ -28,7 +28,7 @@ public class Test15 {
 
 class Jin extends Thread {
 	private boolean isStart = true;
-	
+
 	public boolean isStart() {
 		return isStart;
 	}
@@ -36,7 +36,7 @@ class Jin extends Thread {
 	public void setStart(boolean isStart) {
 		this.isStart = isStart;
 	}
-
+	
 	@Override
 	public void run() {
 		while(isStart) {

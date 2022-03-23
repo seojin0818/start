@@ -1,4 +1,4 @@
-package day18;
+package day18.solve;
 
 import java.io.*;
 
@@ -15,6 +15,7 @@ public class Test05 {
 		// 타겟(기본) 스트림 준비
 		FileReader fr = null;
 		FileWriter fw = null;
+		
 		// 보조(필터) 스트림 준비
 		BufferedReader br = null;
 		BufferedWriter bw = null;
@@ -22,21 +23,20 @@ public class Test05 {
 		// PrintWriter
 		PrintWriter pw = null;
 		
-		
 		try {
 			// 읽는 쪽 스트림
 			// 스트림 연결하기
 			fr = new FileReader("src/day18/result/blackpink.txt");
-			// 필터 스트림
 			br = new BufferedReader(fr);
 			
 			/*
 			
 			// 쓰는 쪽 스트림
-			fw = new FileWriter("src/day18/result/blackpink_01.txt");
+			fw = new FileWriter("src/day18/result/blackpink_02.txt");
 			bw = new BufferedWriter(fw);
 			
 			*/
+			
 			pw = new PrintWriter("src/day18/result/blackpink_02.txt");
 			
 			// 몇 번을 반복해야할지 모르기 때문에
@@ -45,26 +45,26 @@ public class Test05 {
 				String str = br.readLine();
 				
 				if(str == null) {
-					// 읽어온 데이터가 없는 경우
 					break;
 				}
 				
 				/*
-				
-				bw.write(str + "\r\n"); 
-				// 읽어올 때 줄 바꿈 기호를 버렸기 때문에 쓸 때는 추가해줌
-				
-				// 버퍼가 다 채워지지 않은 경우 강제로 비워주기
-				bw.flush();
-				
-				*/
+				 
+				 bw.write(str + "\r\n");
+				 // 읽어올 때 줄 바꿈 기호를 버렸기 때문에 쓸 때는 추가해줌
+				  
+				  // 버퍼가 다 채워지지 않은 경우 강제로 비워주기
+				  bw.flush();
+				  
+				 */
 				
 				pw.println(str);
 				
 				pw.flush();
+			
 			}
 			
-			System.out.println("### 복사 성공 ###");
+			System.out.println("*** 복사 성공 ***");
 			
 		} catch(Exception e) {
 			e.printStackTrace();

@@ -42,6 +42,7 @@ class NameThread extends Thread {
 	 			이 명령은
 	 				1. 반드시 생성자 안에서만 사용해야 함
 	 				2. 반드시 첫줄 첫문장으로 사용해야 함
+	 				
 	 */
 	
 	public NameThread() {
@@ -63,6 +64,7 @@ class NameThread extends Thread {
 		 	new 시킬때마다 이름을 입력된 이름으로 만들 수 있음
 		 
 		 */
+		
 	}
 	
 	@Override

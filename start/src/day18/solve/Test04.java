@@ -1,4 +1,4 @@
-package day18;
+package day18.solve;
 
 import java.io.*;
 
@@ -23,20 +23,19 @@ public class Test04 {
 			br = new BufferedReader(fr);
 			
 			// 읽은 데이터 기억할 배열 만들기
-//			char[] buff = new char[1024];
+			char[] buff = new char[1024];
 			// 몇 번 읽어야하는지 모르므로
 			while(true) {
-				String line = br.readLine(); // 줄 단위로 한 행씩 읽는 함수 / 주의 ] 줄 바꿈 기호는 읽지 않음
+				String line = br.readLine();
 				
 				if(line == null) {
-					// 읽은 데이터가 없는 경우
 					break;
 				}
 				
 				System.out.println(line);
 				
 				/*
-				 	
+				 
 				 	println()는 내용을 출력한 후 줄을 바꾸는 명령
 				 	이미 readLine()에서 한 행을 읽은 후
 				 	줄 바꿈 기호를 버렸기 때문에

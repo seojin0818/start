@@ -51,7 +51,7 @@ class MyThread01 extends Thread {
 	public void run() {
 		// 이 프로그램에서 김희진씨가 블로킹을 1000개를 하도록 하게 할 것
 		for(int i = 0 ; i < 1000 ; i++) {
-			System.out.println("### 김희진씨가 블로킹을 합니다! : " + (i + 1 + " 회차"));
+			System.out.println("### 김희진씨가 블로킹을 합니다! : " + (i + 1) + " 회차");
 		}
 	}
 }
