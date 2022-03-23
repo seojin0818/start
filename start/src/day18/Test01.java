@@ -7,6 +7,7 @@ public class Test01 {
 	/*
 		
 		char 단위로 파일에 데이터를 저장하는 프로그램을 작성하세요.
+		
 	 */
 
 	public Test01() {

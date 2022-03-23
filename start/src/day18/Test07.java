@@ -8,6 +8,7 @@ import java.io.*;
 	
 	ObjectOutputStream으로 저장한(내보낸) 파일은
 	반드시 ObjectInputStream으로 읽어야 함
+	그리고 보내는 쪽과 받는 쪽에 모두 동일한 클래스가 있어야 함
 	
  */
 
@@ -40,6 +41,14 @@ public class Test07 {
 			System.out.println("이름 : " + name);
 			System.out.println("전화 : " + tel);
 			System.out.println("메일 : " + mail);
+			System.out.println("주소 : " + addr);
+			System.out.println("혈액형 : " + blood);
+			System.out.println("나이 : " + age);
+			System.out.println("신장 : " + height);
+			System.out.println("성별 : " + gen);
+			System.out.println("rh : "  + rh);
+			
+			System.out.println(jny);
 			
 		} catch(Exception e) {
 			e.printStackTrace();

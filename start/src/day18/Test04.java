@@ -23,7 +23,7 @@ public class Test04 {
 			br = new BufferedReader(fr);
 			
 			// 읽은 데이터 기억할 배열 만들기
-			char[] buff = new char[1024];
+//			char[] buff = new char[1024];
 			// 몇 번 읽어야하는지 모르므로
 			while(true) {
 				String line = br.readLine(); // 줄 단위로 한 행씩 읽는 함수 / 주의 ] 줄 바꿈 기호는 읽지 않음

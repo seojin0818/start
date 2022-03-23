@@ -7,7 +7,9 @@ import java.io.*;
 	제니의 정보를 Friend 클래스를 이용해서 저장해보자.
 	
 	ObjectOutputStream을 이용해서 저장
+	
  */
+
 public class Test06 {
 
 	public Test06() {
@@ -39,6 +41,7 @@ public class Test06 {
 			// 이처럼 클래스 전체를 입출력하는 행위를 직렬화라고 표현
 			
 			System.out.println("*** 저장 성공 ***");
+			
 		} catch(Exception e) {
 			e.printStackTrace();
 		} finally {

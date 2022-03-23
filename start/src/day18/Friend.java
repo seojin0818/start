@@ -3,17 +3,15 @@ package day18;
 import java.io.*;
 
 /*
-	
-	이 클래스가 직렬화 되기 위해서는(이 클래스 자체 데이터를 넘기려하면)
+	이 클래스가 직렬화 되기 위해서는(이 클래스 자체의 데이터를 넘기려 하면)
 	직렬화 가능한 클래스가 되어야 함
 	
 		방법 ]
 		
 			implements Serializable
-		
-	이 때 전달되는 데이터는
-	멤버 중 변수의 내용만 전달됨
-	
+			
+	이 때 전달되는 데이터는 
+	멤버중 변수의 내용만 전달됨
 	따라서 데이터를 사용하려고 하면
 	똑같은 클래스를 받는 쪽에서도 가지고 있어야 함
 	
@@ -67,6 +65,12 @@ public class Friend implements Serializable {
 	}
 	public void setGen(char gen) {
 		this.gen = gen;
+	}	
+	public String getBlood() {
+		return blood;
+	}
+	public void setBlood(String blood) {
+		this.blood = blood;
 	}
 	public boolean isRh() {
 		return rh;
@@ -74,15 +78,10 @@ public class Friend implements Serializable {
 	public void setRh(boolean rh) {
 		this.rh = rh;
 	}
-	public String getBlood() {
-		return blood;
-	}
-	public void setBlood(String blood) {
-		this.blood = blood;
-	}
+	
 	@Override
 	public String toString() {
 		return "Friend [name=" + name + ", tel=" + tel + ", mail=" + mail + ", addr=" + addr + ", blood=" + blood
 				+ ", age=" + age + ", height=" + height + ", gen=" + gen + ", rh=" + rh + "]";
-}
+	}
 }
