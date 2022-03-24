@@ -42,7 +42,7 @@ public class MsgWrite {
 			@Override
 			public void actionPerformed(ActionEvent evt) {
 				main.frame.setVisible(true);
-				frame.dispose(); // 현재 창만 닫아야 한다.
+				frame.dispose(); // 현재 창만 닫아야 함
 			}
 		});
 		

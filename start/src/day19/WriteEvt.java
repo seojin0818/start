@@ -12,7 +12,7 @@ public class WriteEvt implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// 어떤 버튼이 눌렸는지 먼저 알아낸다.
+		// 어떤 버튼이 눌렸는지 먼저 알아내기
 		String str = e.getActionCommand();
 		if(str.equals("다시작성")) {
 			main.area.setText("");
@@ -24,13 +24,13 @@ public class WriteEvt implements ActionListener {
 	// 쪽지 보내기 전담 처리함수
 	public void sendProc() {
 		// 할일
-		// 보낼 내용을 알아내고
+		// 보낼 내용을 알아내기
 		String msg = main.area.getText();
-		// 바이트 배열로 변환하고
+		// 바이트 배열로 변환하기
 		byte[] buff = msg.getBytes();
 		
-		// 상대방 아이피를 알아내고
-		// 이름 읽어오고
+		// 상대방 아이피를 알아내기
+		// 이름 읽어오기
 		String name = main.field.getText();
 		String ip = (String) main.main.nameToIp.get(name);
 		
@@ -41,19 +41,19 @@ public class WriteEvt implements ActionListener {
 			e.printStackTrace();
 		}
 		
-		// 이것을 패킷으로 포장한다.
+		// 이것을 패킷으로 포장함
 		DatagramPacket pack = null;
 		try {
 			pack = new DatagramPacket(buff, buff.length, inet, 7777);
-			// 이러면 패킷이 만들어졌고 이제 만들어진 패킷을 네트웤에 흘려보내면 된다.
+			// 이러면 패킷이 만들어졌고 이제 만들어진 패킷을 네트워크에 흘려보내면 됨
 			
 			main.main.sSocket.send(pack);
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
 		
-		// 이 작업이 완료되면 전송이 완료가 됬으므로
-		// 현재 작업창을 닫고 메인 창을 띄워준다.
+		// 이 작업이 완료되면 전송이 완료가 됐으므로
+		// 현재 작업창을 닫고 메인 창을 띄워줌
 		main.frame.dispose();
 		main.main.frame.setVisible(true);
 	}

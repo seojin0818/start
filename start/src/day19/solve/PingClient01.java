@@ -1,14 +1,14 @@
-package day19;
+package day19.solve;
 
 import java.io.*;
 import java.net.*;
 
 /*
- 	
- 	서버에 접속한 후
- 	특정 데이터를 서버에 보내면
- 	서버가 다시 응답하는 데이터를 받는 프로그램을 만들어보자.
- 	
+
+	서버에 접속한 후
+	특정 데이터를 서버에 보내면
+	서버가 다시 응답하는 데이터를 받는 프로그램을 만들어보자.
+	
  */
 
 public class PingClient01 {
@@ -44,7 +44,7 @@ public class PingClient01 {
 			out = socket.getOutputStream();
 			
 			// 스트림이 준비되었으니 데이터를 서버에 전달해보자.
-			String msg = "첫번째 네트워크 프로그램 핑(떡볶이)";
+			String msg = "첫번째 네트워크 프로그램 핑(하리보)";
 			// 바이트 배열로 변환
 			byte[] buff = msg.getBytes();
 			// 서버에 보내기
@@ -60,14 +60,14 @@ public class PingClient01 {
 			// 메세지 출력
 			System.out.println("서버가 보내준 메세지 : " + msg);
 			
-		} catch(Exception e) {
-			e.printStackTrace();
-		} finally {
-			try {
-				out.close();
-				in.close();
-			} catch(Exception e) {}
-		}
+			} catch(Exception e) {
+				e.printStackTrace();
+			} finally {
+				try {
+					out.close();
+					in.close();
+				} catch(Exception e) {}
+			}
 	}
 
 	public static void main(String[] args) {

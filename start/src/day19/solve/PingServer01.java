@@ -1,12 +1,12 @@
-package day19;
+package day19.solve;
 
 /*
-	
-	클라이언트가 접속하면 접속을 받고
-	클라이언트가 준 데이터를 받아보고
-	적당한 내용으로 응답하는 서버를 만들어보자.
-	
- */
+
+클라이언트가 접속하면 접속을 받고
+클라이언트가 준 데이터를 받아보고
+적당한 내용으로 응답하는 서버를 만들어보자.
+
+*/
 
 import java.io.*;
 import java.net.*;
@@ -19,29 +19,28 @@ public class PingServer01 {
 		try {
 			server = new ServerSocket(7777);
 			while(true) {
-			// 7777번으로 접속을 요청하는 것을 받을 준비
+			// 7777번으로 요청하는 것을 받을 준비
 			System.out.println("서버 접속 대기");
 			
 			Socket socket = server.accept();
 			
 			/*
-				
-				이 함수는 Blocking 함수
-				이 말은
-					특정한 조건이 만족되지 않으면 실행되지 않는 함수
-					
-				참고 ]
-				
-					우리가 사용했던 함수 중
-						System.in.read()
-						sc.nextLine()
-					또한 블로킹 함수
-					
-				accept()는 누군가 접속을 요청해야만 실행되는 함수
-				이 함수가 실행되었다는 것은
-				누군가 접속을 요청했다는 것이 되고
-				그러면 서버에서는 담당자 전화기를 배정해 줘야 함
-					
+			 	
+			 	accept()는 Blocking 함수
+			 	특정한 조건이 만족되지 않으면 실행되지 않는 함수
+			 	
+			 	참고 ]
+			 		
+			 		우리가 사용했던 함수 중
+			 			System.in.read()
+			 			sc.nextLine()
+			 		또한 블로킹 함수
+			 		
+			 	accept()는 누군가 접속을 요청해야만 실행되는 함수
+			 	이 함수가 실행되었다는 것은
+			 	누군가 접속을 요청했다는 것이 되고
+			 	그러면 서버에서는 담당자 전화기를 배정해 줘야 함
+			 	
 			 */
 			
 			// 즉 반환값으로 실제로 통신할 전화기를 배정함
@@ -51,7 +50,7 @@ public class PingServer01 {
 			 	
 			 	여기까지 실행되었다는 것은
 			 	누군가 접속했다는 것이 되고
-			 	그 사람과 통신할 전화기도 배정받은 상태가 됨
+			 	그 사람과 통신할 전화기도 배정 받은 상태가 됨
 			 	그러면 그 전화기를 이용해서 상대방과 통신이 가능할 것이고
 			 	우리는 자바로 만들기 때문에
 			 	스트림 방식으로 통신을 해야함
@@ -75,10 +74,12 @@ public class PingServer01 {
 			
 			// 스트림에 보내기
 			out.write(buff);
+			
 			}
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
+		
 	}
 
 	public static void main(String[] args) {

@@ -2,6 +2,7 @@ package day19;
 
 public class Synch01 {
 	int[] num = new int[5];
+	// 클래스 블럭 바로 아래 만들어진 배열은 Heap에 만들어진 것이므로 자동 초기화 된 것
 	
 	public Synch01() {
 //		super(); // 생성자를 호출할 시 암묵적으로 상위 클래스의 기본 생성자 호출이 된 상태

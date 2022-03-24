@@ -17,18 +17,21 @@ public class Jjokji {
 	JFrame frame;
 	
 	DatagramSocket sSocket, rSocket;
+	
 	/*
+	 	
 	 	sSocket 은 쪽지를 보내기 위한 소켓
 	 	rSocket 은 쪽지를 받기 위한 소켓
 	 	
 	 	반드시 두개를 만들어야 하는 것은 아니고
-	 	소켓 하나만 가지고 있어도 보내기와 받기를 할 수 있다.
+	 	소켓 하나만 가지고 있어도 보내기와 받기를 할 수 있음
 	 	
 	 	다만
 	 		하나를 공유하는 경우는 
-	 		보내는 도중에는 받지를 못할 수 있다.
+	 		보내는 도중에는 받지를 못할 수 있음
 	 	따라서 안전한 통신을 위해서
-	 	보내는 소켓과 받는 소켓을 구분해서 처리하는 것이 좋다.
+	 	보내는 소켓과 받는 소켓을 구분해서 처리하는 것이 좋음
+	 	
 	 */
 	
 	public Jjokji() {
@@ -38,7 +41,7 @@ public class Jjokji {
 		frame = new JFrame("*** 쪽지 프로그램 ***");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		// 목록상자에 친구 이름을 기록해서 넣자.
+		// 목록상자에 친구 이름을 기록해서 넣음
 		// Map에서 친구이름만 찾아서 넣어보자.
 		Set set = nameToIp.keySet();
 		Vector<String> nameList = new Vector<String>(set);
@@ -69,24 +72,30 @@ public class Jjokji {
 		frame.setResizable(false);
 		
 		/*
+			
 			이제 프로그램이 사작되었으므로
-			네트워크 구성을 할 차례이다.
+			네트워크 구성을 할 차례
 			여기서는 UDP 통신을 해야 하므로
-			DatagramSocket을 이용해서 네트워클 구성을 해야 한다.
+			DatagramSocket을 이용해서 네트워클 구성을 해야 함
+			
 		 */
+		
 		try {
 			sSocket = new DatagramSocket();
 			rSocket = new DatagramSocket(7777);
+			
 			/*
+				
 				이렇게 하면 누군가에 접속한 것이 아니고
-				네트워크 회선에만 접속한 상태가 된다.
-				==> 통신이 가능하도록만 해주는 것이다.
+				네트워크 회선에만 접속한 상태가 됨
+				
+				==> 통신이 가능하도록만 해주는 것
 			 */
 			
 			// 이제 네트워크 구성이 완료되었으므로
-			// 쪽지를 보내고 받을 수 있다.
-			// 받는 프로그램을 시작하자.
-			// 받는 프로그램은 다른 프로그램들과 병행해서 처리가 되어야 하므로 스레드로 구성한다.
+			// 쪽지를 보내고 받을 수 있음
+			// 받는 프로그램을 시작
+			// 받는 프로그램은 다른 프로그램들과 병행해서 처리가 되어야 하므로 스레드로 구성함
 			
 			ReceiveThread t = new ReceiveThread(this); // New Born 상태
 			
@@ -95,7 +104,7 @@ public class Jjokji {
 			
 		} catch(Exception e) {
 			// 위작업이 예외가 발생한 것은 이 프로그램이 더이상 제 기능을 할 수 없는 상태이므로
-			// 열려있는 소켓을 모두 닫아준다.
+			// 열려있는 소켓을 모두 닫아줌
 			close();
 			e.printStackTrace();
 		}
