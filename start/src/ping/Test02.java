@@ -3,13 +3,11 @@ package ping;
 import java.io.*;
 import java.net.*;
 
-public class PingServer {
+public class Test02 {
 	ServerSocket server;
-
-	public PingServer() {
+	
+	public Test02() {
 		try {
-			server = new ServerSocket(7777);
-			
 			while(true) {
 				System.out.println("서버 접속 대기");
 				
@@ -25,9 +23,8 @@ public class PingServer {
 				// 데이터 받기
 				byte[] buff = new byte[10240];
 				int len = in.read(buff);
-				// 문자열 변환
 				String msg = new String(buff, 0, len);
-				// 출력
+				
 				System.out.println(ip + " : " + msg);
 				
 				// 응답 메세지
@@ -39,8 +36,6 @@ public class PingServer {
 			}
 		} catch(Exception e) {
 			e.printStackTrace();
-		
 		}
 	}
-
 }
