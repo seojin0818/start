@@ -9,7 +9,6 @@ public class EmpVO {
 	private String ename, job, sname, sdate, scomm;
 	private Date hdate;
 	private Time htime;
-	
 	public int getEno() {
 		return eno;
 	}

@@ -11,20 +11,28 @@ public class EmpController {
 	public EmpController() {
 		eDao = new EmpDao();
 		
+		eDao.getAll();
+	}
+		
+		/*
 		// 모든 사원의 정보를 조회
 		ArrayList<EmpVO> list = eDao.getAll();
 		for(EmpVO e : list) {
 			System.out.println(e);
 		}
 		
-		// 20번 부서를 입력해서 부서원들의 정보를 조회
-		
-			
-		}
+		// 20부서를 입력해서 부서원들의 정보를 조회
+		ArrayList<EmpVO> list = eDao.getDnoInfo();
+		for(EmpVO e : list) {
+			System.out.prinln(e);
 		
 		// SALESMAN 직급을 가진 사원들의 정보 조회
+		ArrayList<EmpVO> list = eDao.getJobInfo();
+		for(EmpVo e : list) {
+			System.out.println(e);
 		
-
+	}
+*/
 	public static void main(String[] args) {
 		new EmpController();
 	}
