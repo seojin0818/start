@@ -9,15 +9,17 @@ import empProj.sql.*;
 import empProj.vo.EmpVO;
 
 public class EmpDao {
-/*
-	이 클래스를 사용한다는 것은
-	이 클래스를 new 시킨다는 것이고
-	그 의미는 오라클에 접속해서 scott 계정이 가지고있는 emp
-	테이블의 내용을 조회하던지, 수정, 삭제... 등의 작업을 한다는 것이다.
 	
-	따라서 이 클래스가 객체가될 때는
-	오라클을 사용할 준비가 되어있어야 한다.
-	이말은 드라이버로딩이 되어있어야 한다는 것이다.
+/*
+	
+	이 클래스를 사용한다는 것 = 이 클래스를 new 시킨다는 것
+	그 의미는 오라클에 접속해서 scott 계정이 가지고있는 emp 테이블의 내용을 
+	조회하든지, 수정하든지, 삭제하든지 등의 작업을 한다는 것
+	
+	따라서 이 클래스가 객체가 될 때는
+	오라클을 사용할 준비가 돼있어야 함
+	이 말은 드라이버 로딩이 돼있어야 한다는 것
+	
  */
 	
 	private ScottJDBC db;
@@ -30,7 +32,7 @@ public class EmpDao {
 	
 	public EmpDao() {
 		db = new ScottJDBC();
-		// 이순간 ScottJDBC의 인스턴스가 만들어지면 오라클 드라이버를 로딩한 상태가 된다.
+		// 이 순간 ScottJDBC의 인스턴스가 만들어지면 오라클 드라이버를 로딩한 상태
 		
 		// 질의명령을 사용할 준비
 		eSQL = new EmpSQL();
@@ -39,35 +41,36 @@ public class EmpDao {
 	// 모든 사원의 정보를 조회해서 반환해주는 함수
 	public ArrayList<EmpVO> getAll() {
 		// 할일
-		// 반환값 변수 만들고
+		// 반환값 변수 만들기
 		ArrayList<EmpVO> list = new ArrayList<EmpVO>();
 		
-		// 이미 드라이버로딩은 끝난 상태이므로 커넥션을 꺼내온다.
+		// 이미 드라이버로딩은 끝난 상태이므로 커넥션 꺼내오기
 		con = db.getCON();
 		
-		// 질의명령 가져오고
+		// 질의명령 가져오기
 		String sql = eSQL.getSQL(eSQL.SEL_ALL);
 		System.out.println(sql);
-		// 명령 전달 도구 준비하고
+		
+		// 명령 전달 도구 준비하기
 		stmt = db.getSTMT(con);
 		
 		try {
-			// 질의명령 보내고 결과 받고
+			// 질의명령 보내고 결과 받기
 			rs = stmt.executeQuery(sql);
-			// 데이터 추출
+			
+			// 데이터 추출하기
 			while(rs.next()) {
-				// 한명의 데이터를 저장할 VO를 new 시키고
+				// 한 명의 데이터를 저장할 VO를 new 시키기
 				EmpVO eVO = new EmpVO();
 				
-				// 데이터를 꺼내고
+				// 데이터 꺼내기
 				int eno = rs.getInt("empno");
 				String name = rs.getString("ename");
 				String job = rs.getString("job");
 				Date hdate = rs.getDate("hiredate");
 				Time htime = rs.getTime("hiredate");
 				
-				// VO 에 채우고
-				
+				// VO에 채우기
 				eVO.setEno(eno);
 				eVO.setEname(name);
 				eVO.setJob(job);
@@ -75,7 +78,7 @@ public class EmpDao {
 				eVO.setHtime(htime);
 				eVO.setSdate();
 				
-				// VO가 완성이 됬으므로 list 에 채워준다.
+				// VO가 완성됐으므로 list에 채워주기
 				list.add(eVO);
 			}
 		} catch(Exception e) {
@@ -89,9 +92,9 @@ public class EmpDao {
 		return list;
 	}
 	
-	// 부서번호를 입력받아서 부서원들의 정보를 반환해주는 함수
+	// 부서번호를 입력 받아서 부서원들의 정보를 반환해주는 함수
 	public ArrayList<EmpVO> getDnoInfo(int dno) {
-		// 반환값 변수
+		// 반환값 변수 만들기
 		ArrayList<EmpVO> list = new ArrayList<EmpVO>();
 		
 		// 이미 드라이버 로딩은 끝난 상태이므로 커넥션 꺼내오기
@@ -100,33 +103,40 @@ public class EmpDao {
 		// 질의명령 가져오기
 		String sql = eSQL.getSQL(eSQL.SEL_DNOINFO);
 		
-		// 명령전달도구 준비하기
+		// 명령 전달 도구 준비하기
 		pstmt = db.getPSTMT(con, sql);
 		
 		try {
-			// 질의 명령 완성하고
+			// 질의명령 완성하기
 			pstmt.setInt(1, dno);
-			// 질의명령 보내고 결과 받고
-			rs = pstmt.executeQuery(sql);
-			// 데이터 추출
+			// 질의명령 보내고 결과 받기
+			rs = pstmt.executeQuery();
+			// 데이터 추출하기
 			while(rs.next()) {
 				EmpVO eVO = new EmpVO();
-				// 데이터 꺼내고
+				// 데이터 꺼내기
 				int eno = rs.getInt("empno");
 				String name = rs.getString("ename");
 				String job = rs.getString("job");
 				Date hdate = rs.getDate("hiredate");
 				Time htime = rs.getTime("hiredate");
+				int sal = rs.getInt("sal");
+				dno = rs.getInt("deptno");
+				String dname = rs.getString("dname");
+				String loc = rs.getString("loc");
 				
-				// VO에 채우고
+				// VO에 채우기
 				eVO.setEno(eno);
 				eVO.setEname(name);
 				eVO.setJob(job);
 				eVO.setHdate(hdate);
 				eVO.setHtime(htime);
 				eVO.setSdate();
+				eVO.setDno(dno);
+				eVO.setDname(dname);
+				eVO.setLoc(loc);
 				
-				// VO가 완성 됐으므로 list에 채워주기
+				// VO가 완성됐으므로 list에 채워주기
 				list.add(eVO);
 			}
 		} catch(Exception e) {
@@ -140,8 +150,7 @@ public class EmpDao {
 		return list;
 	}
 	
-	
-	// 직급을 입력받아서 해당직급 사원들의 정보를 반환해주는 함수
+	// 직급을 입력 받아서 해당 직급 사원들의 정보를 반환해주는 함수
 	public ArrayList<EmpVO> getJobInfo(String job){
 		// 반환값 변수
 		ArrayList<EmpVO> list = new ArrayList<EmpVO>();
@@ -152,33 +161,42 @@ public class EmpDao {
 		// 질의명령 가져오기
 		String sql = eSQL.getSQL(eSQL.SEL_JOBINFO);
 				
-		// 명령전달도구 준비하기
+		// 명령 전달 도구 준비하기
 		pstmt = db.getPSTMT(con, sql);
 				
 		try {
-			// 질의명령 완성하고
+			// 질의명령 완성하기
 			pstmt.setString(1, job);
-			// 질의명령 보내고 결과 받고
-			rs = pstmt.executeQuery(sql);
-			// 데이터 추출
+			
+			// 질의명령 보내고 결과 받기
+			rs = pstmt.executeQuery();
+			
+			// 데이터 추출하기
 			while(rs.next()) {
 			EmpVO eVO = new EmpVO();
-			// 데이터 꺼내고
+			
+			// 데이터 꺼내기
 			int eno = rs.getInt("empno");
 			String name = rs.getString("ename");
 			String job1 = rs.getString("job");
 			Date hdate = rs.getDate("hiredate");
 			Time htime = rs.getTime("hiredate");
+			int sal = rs.getInt("sal");
+			int grade = rs.getInt("grade");
+			String scomm = rs.getString("comm");
 						
-			// VO에 채우고
+			// VO에 채우기
 			eVO.setEno(eno);
 			eVO.setEname(name);
 			eVO.setJob(job1);
 			eVO.setHdate(hdate);
 			eVO.setHtime(htime);
 			eVO.setSdate();
+			eVO.setSal(sal);
+			eVO.setGrade(grade);
+			eVO.setScomm(scomm);
 						
-			// VO가 완성 됐으므로 list에 채워주기
+			// VO가 완성됐으므로 list에 채워주기
 			list.add(eVO);
 		}
 		} catch(Exception e) {
