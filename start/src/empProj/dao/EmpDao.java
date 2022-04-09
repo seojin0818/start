@@ -47,7 +47,7 @@ public class EmpDao {
 		
 		// 질의명령 가져오고
 		String sql = eSQL.getSQL(eSQL.SEL_ALL);
-
+		System.out.println(sql);
 		// 명령 전달 도구 준비하고
 		stmt = db.getSTMT(con);
 		
@@ -91,9 +91,6 @@ public class EmpDao {
 	
 	// 부서번호를 입력받아서 부서원들의 정보를 반환해주는 함수
 	public ArrayList<EmpVO> getDnoInfo(int dno) {
-		Scanner sc = new Scanner(System.in);
-		System.out.print("조회할 부서번호를 입력하세요 ! : ");
-		int no = sc.nextInt();
 		// 반환값 변수
 		ArrayList<EmpVO> list = new ArrayList<EmpVO>();
 		
@@ -107,6 +104,8 @@ public class EmpDao {
 		pstmt = db.getPSTMT(con, sql);
 		
 		try {
+			// 질의 명령 완성하고
+			pstmt.setInt(1, dno);
 			// 질의명령 보내고 결과 받고
 			rs = pstmt.executeQuery(sql);
 			// 데이터 추출
@@ -143,9 +142,7 @@ public class EmpDao {
 	
 	
 	// 직급을 입력받아서 해당직급 사원들의 정보를 반환해주는 함수
-	public ArrayList<EmpVO> getJobInfo(Scanner sc){
-		System.out.print("조회할 직급을 입력하세요 ! : ");
-		String str = sc.nextLine();
+	public ArrayList<EmpVO> getJobInfo(String job){
 		// 반환값 변수
 		ArrayList<EmpVO> list = new ArrayList<EmpVO>();
 		
@@ -159,6 +156,8 @@ public class EmpDao {
 		pstmt = db.getPSTMT(con, sql);
 				
 		try {
+			// 질의명령 완성하고
+			pstmt.setString(1, job);
 			// 질의명령 보내고 결과 받고
 			rs = pstmt.executeQuery(sql);
 			// 데이터 추출
@@ -167,14 +166,14 @@ public class EmpDao {
 			// 데이터 꺼내고
 			int eno = rs.getInt("empno");
 			String name = rs.getString("ename");
-			String job = rs.getString("job");
+			String job1 = rs.getString("job");
 			Date hdate = rs.getDate("hiredate");
 			Time htime = rs.getTime("hiredate");
 						
 			// VO에 채우고
 			eVO.setEno(eno);
 			eVO.setEname(name);
-			eVO.setJob(job);
+			eVO.setJob(job1);
 			eVO.setHdate(hdate);
 			eVO.setHtime(htime);
 			eVO.setSdate();
@@ -189,7 +188,6 @@ public class EmpDao {
 		db.close(pstmt);
 		db.close(con);
 		}
-		
 		
 		return list;
 	}
