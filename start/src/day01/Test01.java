@@ -11,6 +11,7 @@ public class Test01 {
 		System.out.println("첫번째 자바 클래스");
 		// System.out.println(내용);
 		// 내용 출력 + 줄 바꿈 o
+		// 문자열을 표시할 때는 ""
 	}
 
 }
