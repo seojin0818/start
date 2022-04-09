@@ -26,8 +26,8 @@ public class EmpController {
 		
 		// SALESMAN 직급을 가진 사원들의 정보 조회
 		ArrayList<EmpVO> jlist = eDao.getJobInfo("SALESMAN");
-		for(EmpVO e1 : jlist) {
-			System.out.println(e1);
+		for(EmpVO e : jlist) {
+			System.out.println(e);
 		}
 		
 	}
