@@ -1,16 +1,17 @@
 package day06.ex;
 
+import java.util.*;
+
 /*
  	
- 	문제 1]
+ 	문제 1 ]
  	
  		3 ~ 100 사이의 정수를 입력 받아서
  		이 정수가 소수인지 판단하는 프로그램을 작성하세요.
  	
  	참고 ]
  		
- 		소수
- 			1과 자신으로만 나누어지는 수
+ 		소수 : 1과 자신으로만 나누어지는 수
  			
  	보너스 ]
  	
@@ -18,7 +19,6 @@ package day06.ex;
  	
  */
 
-import java.util.*;
 
 public class Ex01 {
 
@@ -30,7 +30,6 @@ public class Ex01 {
 		Scanner sc = new Scanner(System.in);
 		
 		// 2) 입력 받기 전 입력 메세지 출력
-		
 		
 	}
 
