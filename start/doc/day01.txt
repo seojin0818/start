@@ -172,3 +172,4 @@ System.out.printf("형식형식형식...", 내용, 내용, 내용,...);
 	int, double : 숫자형 기본 입력 타입
 	정수형은 int로 자동 결정
 	실수형은 double로 자동 결정
+	
