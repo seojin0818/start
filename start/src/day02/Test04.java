@@ -55,6 +55,7 @@ public class Test04 {
 		System.out.println("키 : " + height);
 		// System.out.println(내용);
 		// 내용 출력 + 줄 바꿈
+		// 문자열을 표시할 때는 ""
 		
 		System.out.println("'가' > '나' : " + ('가' > '나'));
 		// 문자는 정수를 사용하고 있으므로 대소비교 가능

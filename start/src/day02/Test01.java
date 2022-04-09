@@ -26,6 +26,7 @@ public class Test01 {
 		System.out.println("한 줄 주석 작성 끝");
 		// System.out.println(내용);
 		// 내용 출력 + 줄 바꿈
+		// 문자열을 표시할 때는 ""
 		
 		// 다시 한 줄 주석 System.out.println("다시 한 줄 주석");
 		

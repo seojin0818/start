@@ -32,9 +32,8 @@ public class Test03 {
 		
 		// 할 일
 		// 1) 데이터타입 정하기
-		//		나이는 정수형이므로 정수로 기억시키기
-		// 		정수의 기본 사용타입은 int이므로 int 사용
 		int age; // 변수 선언
+		// 나이는 정수형, 정수형의 기본 타입은 int
 		
 		// 2) 데이터 기억시키기
 		age = 26; // 변수 초기화
@@ -79,6 +78,7 @@ public class Test03 {
 		System.out.println("곰돌이의 나이 : " + age);
 		// System.out.println(내용);
 		// 내용 출력 + 줄 바꿈
+		// 문자열을 표시할 때는 ""
 		
 	}
 }
