@@ -11,7 +11,9 @@ package day02;
 
 /*
 
- 문제 ] 자신의 이름, 나이, 이름 첫 문자, 키를 변수에 기억시키고 출력하세요.
+ 문제 ] 
+ 	
+ 	자신의 이름, 나이, 이름 첫 문자, 키를 변수에 기억시키고 출력하세요.
  
 */
 
@@ -48,7 +50,7 @@ public class Test04 {
 		char start = '백';
 		double height = 165.;
 		
-		// 최종 출력
+		// 최종 출력하기
 		System.out.println("이름 : " + name);
 		System.out.println("나이 : " + age);
 		System.out.println("이름 첫 문자 : " + start);
