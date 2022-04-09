@@ -1,14 +1,17 @@
 package day08;
 
+import java.util.*;
+
 /*
 	
-	+, -, *, / 연산을 하는
-	연산식을 입력하면
-	결과를 보여주는 계산기 프로그램을 작성하세요.
+	문제 ]
 	
-	단, 연산식을 문자열 배열에 담아서 처리하세요.
+		+, -, *, / 연산을 하는 연산식을 입력하면
+		결과를 보여주는 계산기 프로그램을 작성하세요.
+		
+		단, 연산식을 문자열 배열에 담아서 처리하세요.
 	
-	ex ]
+	예 ]
 	
 		2*3
 		
@@ -23,18 +26,16 @@ package day08;
 		
  */
 
-import java.util.*;
-
 public class Test09 {
 
 	public static void main(String[] args) {
 	// 진입점 함수
 		
 		// 할 일
-		// 1) 입력 도구 준비
+		// 1) 입력 도구 준비하기
 		Scanner sc = new Scanner(System.in);
 		
-		// 2) 입력 받기 전 입력 메세지 출력
+		// 2) 입력 받기 전 입력 메세지 출력하기
 		System.out.print("계산식을 입력하세요! : ");
 		
 		// 3) 입력 받아서 변수에 기억시키기
@@ -60,7 +61,7 @@ public class Test09 {
 		sik[1] = str.substring(idx, idx + 1);
 		sik[2] = str.substring(idx + 1);
 		
-		// 7) 계산
+		// 7) 계산하기
 		int no1 = Integer.parseInt(sik[0]);
 		int no2 = Integer.parseInt(sik[2]);
 		
@@ -82,7 +83,7 @@ public class Test09 {
 			
 		}
 		
-		// 8) 최종 출력
+		// 8) 최종 출력하기
 		System.out.println("입력한 계산식\n\t" + str + "\n의 결과는 \n\t" + result);
 	}
 }
