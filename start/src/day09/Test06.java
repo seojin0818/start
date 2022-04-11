@@ -15,5 +15,6 @@ public class Test06 {
 		num = no;
 		
 //		return no;
+		
 	}
 }
