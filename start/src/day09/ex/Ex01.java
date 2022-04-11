@@ -1,5 +1,7 @@
 package day09.ex;
 
+import java.util.*;
+
 /*
 	
 	문제 1 ]
@@ -11,16 +13,16 @@ package day09.ex;
 		각 연산은 함수로 분리해서 처리하세요.
 		
 		입력, 출력, 계산을 모두 분리해서 함수로 만들어서 하세요.
+		
  */
-
-import java.util.*;
 
 public class Ex01 {
 	public Ex01() {
 		Scanner sc = new Scanner(System.in);
 		
-		String[] sik = input(sc); // 계산식 입력 받고
-		// 계산 결과 받고
+		// 계산식 입력 받기
+		String[] sik = input(sc); 
+		// 계산 결과 받기
 		double result = calc(sik);
 		
 		System.out.println(sik[0] + " " + sik[1] + " " + sik[2] + " 의 연산 결과 : " + result);
@@ -94,5 +96,5 @@ public class Ex01 {
 		}
 		
 		return result;
-}
+	}
 }
