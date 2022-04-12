@@ -204,7 +204,7 @@ public class EmpDao {
 			// 꺼내서 리스트에 담고
 			while(rs.next()) {
 				EmpVO eVO = new EmpVO();
-				eVO.setEno(rs.getInt("eno"));
+				eVO.setEno(rs.getInt("empno"));
 				eVO.setEname(rs.getString("ename"));
 				eVO.setJob(rs.getString("job"));
 				eVO.setSal(rs.getInt("sal"));
