@@ -103,7 +103,7 @@ public class EmpView {
 	}
 	
 	// 사원 정보 출력해주는 함수 ***
-	public void enoListPrint(Scanner sc) {
+	public void enoInfoPrint(Scanner sc) {
 		while(true) {
 			int eno = getEno(sc);
 			
@@ -125,9 +125,9 @@ public class EmpView {
 			for(EmpVO evo : list) {
 				System.out.printf("|%7d | %10s | %10s | %6d | %22s |\n",
 									evo.getEno(), evo.getEname(), evo.getJob(), evo.getSal(), evo.getHdate());
+			}
 				System.out.println("==============================================================================================================");
 				System.out.println();
-			}
 		}
 	}
 	

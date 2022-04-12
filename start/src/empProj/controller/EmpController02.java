@@ -30,7 +30,7 @@ public class EmpController02 {
 			
 			switch(str) {
 			case "eno":
-				view.enoListPrint(sc);
+				view.enoInfoPrint(sc);
 				break;
 			case "dno":
 				view.dnoInfoPrint(sc);
