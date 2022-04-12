@@ -5,12 +5,15 @@ import java.util.*;
 import empProj.view.*;
 
 /*
+	
 	사원번호와 사원이름을 조회해서 출력해주고
 	사원번호를 입력하면
 	해당 사원의
 		사원번호, 사원이름, 직급, 급여, 입사일
 	을 조회해서 출력해주는 기능을 추가하세요.
+	
  */
+
 public class EmpController02 {
 	private EmpView view;
 	
@@ -26,6 +29,9 @@ public class EmpController02 {
 			System.out.println();
 			
 			switch(str) {
+			case "eno":
+				view.enoListPrint(sc);
+				break;
 			case "dno":
 				view.dnoInfoPrint(sc);
 				break;

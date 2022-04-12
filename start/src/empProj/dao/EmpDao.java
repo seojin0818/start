@@ -157,6 +157,73 @@ public class EmpDao {
 		
 	}
 	
+	// 사원번호리스트 조회 전담 처리함수 ***
+	public ArrayList<Integer> getEnoList(){
+		// 반환값 변수
+		ArrayList<Integer> list = new ArrayList<Integer>();
+		// 커넥션 연결하고
+		con = db.getCON();
+		// 질의명령 꺼내고
+		String sql = eSQL.getSQL(eSQL.SEL_ENOLIST);
+		// 명령전달도구 준비하고
+		stmt = db.getSTMT(con);
+		// 질의명령 보내고 결과 받고
+		try {
+			rs = stmt.executeQuery(sql);
+			
+			// 꺼내서 리스트에 담고
+			while(rs.next()) {
+				list.add(rs.getInt("empno"));
+			}
+		} catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			db.close(rs);
+			db.close(stmt);
+			db.close(con);
+		}
+		
+		// 리스트 반환하고
+		return list;
+		
+	}
+	
+	// 사원정보 조회 전담 처리함수 ***
+	public ArrayList<EmpVO> getEnoInfo(){
+		// 반환값 변수
+		ArrayList<EmpVO> list = new ArrayList<EmpVO>();
+		// 커넥션 연결하고
+		con = db.getCON();
+		// 질의명령 꺼내오고
+		String sql = eSQL.getSQL(eSQL.SEL_ENOINFO);
+		// 명령전달도구 준비하고
+		stmt = db.getSTMT(con);
+		// 질의명령 보내고 결과 받고
+		try {
+			rs = stmt.executeQuery(sql);
+			// 꺼내서 리스트에 담고
+			while(rs.next()) {
+				EmpVO eVO = new EmpVO();
+				eVO.setEno(rs.getInt("eno"));
+				eVO.setEname(rs.getString("ename"));
+				eVO.setJob(rs.getString("job"));
+				eVO.setSal(rs.getInt("sal"));
+				eVO.setHdate(rs.getDate("hiredate"));
+				
+				list.add(eVO);
+			}
+		} catch(Exception e){
+			e.printStackTrace();
+		} finally {
+			db.close(rs);
+			db.close(stmt);
+			db.close(con);
+		}
+		
+		// 리스트 반환하고
+		return list;
+	}
+	
 	// 부서번호를 입력 받아서 부서원들의 정보를 반환해주는 함수
 	public ArrayList<EmpVO> getDnoInfo(int dno) {
 		// 반환값 변수 만들기

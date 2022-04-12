@@ -15,6 +15,8 @@ public class EmpSQL {
 	public final int SEL_JOBLIST	= 1004;
 	public final int SEL_DNOLIST	= 1005;
 	public final int SEL_DEPTLIST	= 1006;
+	public final int SEL_ENOINFO	= 1007;
+	public final int SEL_ENOLIST	= 1008;
 	
 	// 질의명령을 기억하고 있다가 요청하면 반환해주는 함수
 	public String getSQL(int code) {
@@ -73,9 +75,22 @@ public class EmpSQL {
 			buff.append("FROM ");
 			buff.append("	dept ");
 			break;
+		case SEL_ENOINFO:
+			buff.append("SELECT ");
+			buff.append("	empno, ename, job, sal, hiredate ");
+			buff.append("FROM ");
+			buff.append("	emp ");
+			break;
+		case SEL_ENOLIST:
+			buff.append("SELECT ");
+			buff.append("	empno ");
+			buff.append("FROM ");
+			buff.append("	emp ");
+			break;
 		}
 		
 		return buff.toString();
+		
 	}
-
 }
+	

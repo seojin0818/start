@@ -7,8 +7,10 @@ import empProj.vo.*;
 
 public class EmpView {
 	private EmpDao eDao;
+	private EmpVO eVo;
 	public EmpView() {
 		eDao = new EmpDao();
+		eVo = new EmpVO();
 	}
 	
 	// 모든 사원 리스트 출력해주는 함수
@@ -62,6 +64,71 @@ public class EmpView {
 		}
 		
 		return dno;
+	}
+	
+	// 사원번호리스트 출력함수 ***
+	public void empnoPrint() {
+		ArrayList<Integer> list = eDao.getEnoList();
+		
+		// 출력
+		for(Integer no : list) {
+			System.out.println(no + " - " + eVo.getEname());
+		}
+		System.out.println();
+	}
+	
+	// 사원번호 입력받기 전담처리함수 ***
+	public int getEno(Scanner sc) {
+		int eno = 0;
+		ArrayList<Integer> enoList = eDao.getEnoList();
+		while(true) {
+			empnoPrint();
+			System.out.print("사원번호를 입력하세요! 이전 단계는 -1을 입력하세요.\n사원번호 : ");
+			String sno = sc.nextLine();
+			System.out.println();
+			try {
+				eno = Integer.parseInt(sno);
+				
+				if(eno != -1 && !enoList.contains(eno)) {
+					System.out.println("# 없는 사원번호입니다. 다시 입력하세요!\n");
+					continue;
+				}
+			} catch(Exception e) {
+				System.out.println("# 잘못된 입력입니다.\n");
+				continue;
+			}
+			break;
+		}
+		return eno;
+	}
+	
+	// 사원 정보 출력해주는 함수 ***
+	public void enoListPrint(Scanner sc) {
+		while(true) {
+			int eno = getEno(sc);
+			
+			if(eno == -1) {
+				break;
+			}
+			
+			ArrayList<EmpVO> list = eDao.getEnoInfo();
+			
+			if(list.size() == 0) {
+				System.out.println("### 없는 사원번호입니다.\n");
+				continue;
+			}
+			
+			System.out.println("*** " + eno + " 번 사원 정보 조회");
+			System.out.println("==============================================================================================================");
+			System.out.println("| 사원번호 |  사원이름  |  직 급  |  급 여  |  입 사 일  |");
+			System.out.println("--------------------------------------------------------------------------------------------------------------");
+			for(EmpVO evo : list) {
+				System.out.printf("|%7d | %10s | %10s | %6d | %22s |\n",
+									evo.getEno(), evo.getEname(), evo.getJob(), evo.getSal(), evo.getHdate());
+				System.out.println("==============================================================================================================");
+				System.out.println();
+			}
+		}
 	}
 	
 	// 부서원 정보 출력해주는 함수
