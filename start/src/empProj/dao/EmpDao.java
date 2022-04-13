@@ -158,9 +158,9 @@ public class EmpDao {
 	}
 	
 	// 사원번호리스트 조회 전담 처리함수 ***
-	public ArrayList<Integer> getEnoList(){
+	public ArrayList<EmpVO> getEnoList(){
 		// 반환값 변수
-		ArrayList<Integer> list = new ArrayList<Integer>();
+		ArrayList<EmpVO> list = new ArrayList<EmpVO>();
 		// 커넥션 연결하고
 		con = db.getCON();
 		// 질의명령 꺼내고
@@ -173,7 +173,11 @@ public class EmpDao {
 			
 			// 꺼내서 리스트에 담고
 			while(rs.next()) {
-				list.add(rs.getInt("empno"));
+				EmpVO eVO = new EmpVO();
+				eVO.setEno(rs.getInt("empno"));
+				eVO.setEname(rs.getString("ename"));
+				
+				list.add(eVO);
 			}
 		} catch(Exception e) {
 			e.printStackTrace();

@@ -83,7 +83,7 @@ public class EmpSQL {
 			break;
 		case SEL_ENOLIST:
 			buff.append("SELECT ");
-			buff.append("	empno ");
+			buff.append("	empno, ename ");
 			buff.append("FROM ");
 			buff.append("	emp ");
 			break;

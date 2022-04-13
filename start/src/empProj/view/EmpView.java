@@ -10,7 +10,6 @@ public class EmpView {
 	private EmpVO eVo;
 	public EmpView() {
 		eDao = new EmpDao();
-		eVo = new EmpVO();
 	}
 	
 	// 모든 사원 리스트 출력해주는 함수
@@ -68,11 +67,11 @@ public class EmpView {
 	
 	// 사원번호리스트 출력함수 ***
 	public void empnoPrint() {
-		ArrayList<Integer> list = eDao.getEnoList();
+		ArrayList<EmpVO> list = eDao.getEnoList();
 		
 		// 출력
-		for(Integer no : list) {
-			System.out.println(no + " - " + eVo.getEname());
+		for(EmpVO evo : list) {
+			System.out.println(evo + " - ");
 		}
 		System.out.println();
 	}
@@ -80,7 +79,7 @@ public class EmpView {
 	// 사원번호 입력받기 전담처리함수 ***
 	public int getEno(Scanner sc) {
 		int eno = 0;
-		ArrayList<Integer> enoList = eDao.getEnoList();
+		ArrayList<EmpVO> enoList = eDao.getEnoList();
 		while(true) {
 			empnoPrint();
 			System.out.print("사원번호를 입력하세요! 이전 단계는 -1을 입력하세요.\n사원번호 : ");
