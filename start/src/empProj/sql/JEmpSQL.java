@@ -14,9 +14,12 @@ public class JEmpSQL {
 	
 	public final int SEL_TNAME			= 1001;
 	
-	public final int SEL_NEWEMP			= 1002;
+	public final int SEL_LAST			= 1002;
 	
 	public final int INSERT_JEMP		= 3001;
+	public final int INSERT_JEMP_D30	= 3002;
+	
+	public final int DEL_JEMP_D30		= 4001;
 	
 	public final int ADD_TABLE			= 5001;
 	
@@ -34,6 +37,19 @@ public class JEmpSQL {
 			buff.append("	tab ");
 			buff.append("WHERE ");
 			buff.append("	tname = 'JEMP' ");
+			break;
+		case SEL_LAST:
+			buff.append("SELECT ");
+			buff.append("	empno eno, ename name, job, hiredate hdate, deptno dno ");
+			buff.append("FROM ");
+			buff.append("	jemp ");
+			buff.append("WHERE ");
+			buff.append("	hiredate = ( ");
+			buff.append("		         SELECT "); 
+			buff.append("		         	MAX(hiredate) "); 
+			buff.append("		          FROM "); 
+			buff.append("		            jemp ");
+			buff.append("		         ) ");
 			break;
 		case ADD_TABLE:
 			buff.append("CREATE TABLE jemp ");
@@ -53,21 +69,22 @@ public class JEmpSQL {
 			buff.append("		?, ?, sysdate, ? ");
 			buff.append(") ");
 			break;
-		case SEL_NEWEMP:
+		case INSERT_JEMP_D30:
+			buff.append("INSERT INTO jbackup ");
 			buff.append("SELECT ");
-			buff.append("	empno, ename, job, hiredate, deptno ");
+			buff.append("	e.*, sysdate ");
 			buff.append("FROM ");
-			buff.append("	jemp ");
+			buff.append("	jemp e ");
 			buff.append("WHERE ");
-			buff.append("	(SELECT ");
-			buff.append("		MAX(empno) ");
-			buff.append("	FROM ");
-			buff.append("		jemp ");
-			buff.append("	GROUP BY ");
-			buff.append("		empno ");
-			buff.append("	) ");
+			buff.append("	deptno = 30 ");
 			break;
-					}
+		case DEL_JEMP_D30:
+			buff.append("DELETE FROM ");
+			buff.append("   jemp ");
+			buff.append("WHERE ");
+			buff.append("   deptno = 30 ");
+			break;
+		}
 		
 		// buff를 문자열로 변환해서 반환
 		return buff.toString();

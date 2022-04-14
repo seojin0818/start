@@ -119,30 +119,40 @@ public class JEmpDao {
 		// 
 	}
 	
-	// 추가 사원 정보를 반환해주는 함수
-	public ArrayList<EmpVO> getNewEmp(){
-		// 반환값 변수 만들기
-		ArrayList<EmpVO> list = new ArrayList<EmpVO>();
-		// 커넥션 꺼내오기
+	// 가장 최근 입사한 사원의 정보 조회 전담 처리함수
+	public EmpVO getLast() {
+		// 할 일
+		// 반환값 변수 만들고
+		EmpVO eVO = new EmpVO();
+		
+		// 커넥션 꺼내오고
 		con = db.getCON();
-		// 질의명령 가져오기
-		String sql = jSQL.getSQL(jSQL.SEL_NEWEMP);
-		// 명령전달도구 준비하기
+		// 질의명령 가져오고
+		String sql = jSQL.getSQL(jSQL.SEL_LAST);
+		// 명령전달도구 준비하고
 		stmt = db.getSTMT(con);
-		// 질의명령 보내고 결과 받고
-		try {
+		try{
+			// 질의명령 보내고 결과 받고
 			rs = stmt.executeQuery(sql);
-			// 꺼내서 리스트에 담고
-			while(rs.next()) {
-				EmpVO eVO = new EmpVO();
-				eVO.setEno(rs.getInt("empno"));
-				eVO.setEname(rs.getString("ename"));
-				eVO.setJob(rs.getString("job"));
-				eVO.setHdate(rs.getDate("hiredate"));
-				
-				list.add(eVO);
-				
-			}
+			// 꺼내서 VO에 채워주고
+			// 가상레코드포인터 한줄 내리고
+			rs.next();
+			// 데이터 꺼내서 VO에 담고
+			int eno = rs.getInt("eno");
+			String name = rs.getString("name");
+			String job = rs.getString("job");
+			Date hdate = rs.getDate("hdate");
+			Time htime = rs.getTime("hdate");
+			int dno = rs.getInt("dno");
+			
+			// 꺼낸 데이터 VO에 담고
+			eVO.setEno(eno);
+			eVO.setEname(name);
+			eVO.setJob(job);
+			eVO.setHdate(hdate);
+			eVO.setHtime(htime);
+			eVO.setSdate();
+			eVO.setDno(dno);
 		} catch(Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -150,7 +160,55 @@ public class JEmpDao {
 			db.close(stmt);
 			db.close(con);
 		}
-		return list;
+		// 데이터 반환하고
+		return eVO;
 	}
-
+	
+	// 30번 사원들 백업 전담함수
+	public int backupDno30() {
+		// 할 일
+		// 반환값 변수
+		int cnt = 0;
+		// 커넥션 연결하고
+		con = db.getCON();
+		// 질의명령 가져오고
+		String sql = jSQL.getSQL(jSQL.INSERT_JEMP_D30);
+		// 명령전달도구 준비하고
+		stmt = db.getSTMT(con);
+		try {
+			// 질의명령 보내고 결과 받고
+			cnt = stmt.executeUpdate(sql);
+		} catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			db.close(stmt);
+			db.close(con);
+		}
+		// 데이터 반환하고
+		return cnt;
+	}
+	
+	// 30번 부서원 삭제 전담함수
+	public int delDno30() {
+		// 할 일
+		// 반환값 변수
+		int cnt = 0;
+		// 커넥션
+		con = db.getCON();
+		// 질의명령
+		String sql = jSQL.getSQL(jSQL.DEL_JEMP_D30);
+		// 명령전달도구
+		stmt = db.getSTMT(con);
+		// 질의명령 보내고 결과 받고
+		try {
+			cnt = stmt.executeUpdate(sql);
+		} catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			db.close(stmt);
+			db.close(con);
+		}
+		// 결과 내보내고
+		return cnt;
+	}
 }
