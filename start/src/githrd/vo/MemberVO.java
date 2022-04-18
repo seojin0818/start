@@ -44,11 +44,27 @@ public class MemberVO {
 	public void setTel(String tel) {
 		this.tel = tel;
 	}
+	
+	public String getSdate() {
+		return sdate;
+	}
+	public void setSdate(String sdate) {
+		this.sdate = sdate;
+	}
+	public void setSdate() {
+		SimpleDateFormat form = new SimpleDateFormat("yyyy년 MM월 dd일 ");
+		sdate = form.format(jdate);
+	}
+	public Date getJdate() {
+		return jdate;
+	}
+	public void setJdate(Date jdate) {
+		this.jdate = jdate;
+	}
 	@Override
 	public String toString() {
 		return "MemberVO [mno=" + mno + ", name=" + name + ", id=" + id + ", pw=" + pw + ", mail=" + mail + ", tel="
 				+ tel + ", sdate=" + sdate + ", jdate=" + jdate + "]";
 	}
-
 
 }

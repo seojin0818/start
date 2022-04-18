@@ -17,21 +17,23 @@ public class MemberSQL {
 			buff.append("	mno, id ");
 			buff.append("FROM ");
 			buff.append("	member ");
+			break;
 		case SEL_MNO:
 			buff.append("SELECT ");
-			buff.append("	mno, name, id, pw, mail, tel ");
+			buff.append("	mno, name, id, pw, mail, tel, joindate jdate ");
 			buff.append("FROM ");
 			buff.append("	member ");
 			buff.append("WHERE ");
 			buff.append("	mno = ? ");
+			break;
 		case UPD_TEL:
 			buff.append("UPDATE ");
 			buff.append("	member ");
 			buff.append("SET ");
-			buff.append("	tel = 010-1212-1212 ");
+			buff.append("	tel = ? ");
 			buff.append("WHERE ");
-			buff.append("id = ? ");
-				
+			buff.append("	id = ? ");
+			break;
 		}
 		
 		return buff.toString();

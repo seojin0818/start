@@ -77,53 +77,55 @@ public class MemberDao {
 			return list;
 	}
 	
-		// 회원번호(1001)를 입력하면 해당 회원의 정보를 출력해주는 함수
-		public ArrayList<MemberVO> getMnoInfo(int mno){
-			// 반환값 변수
-			ArrayList<MemberVO> list = new ArrayList<MemberVO>();
-			
-			// 커넥션 연결하고
-			con = db.getCon();
-			
-			// 질의명령 가져오고
-			String sql = mSQL.getSQL(mSQL.SEL_MNO);
-			
-			// 명령전달도구 준비하고
-			pstmt = db.getPstmt(con, sql);
-			
-			try {
-				// 질의명령 완성하고
-				pstmt.setInt(1, mno);
-				// 질의명령 보내고 결과 받고
-				rs = pstmt.executeQuery();
-				// 데이터 꺼내고
-				while(rs.next()) {
-					// 한명분 데이터 저장할 VO 만들고
-					MemberVO mVO = new MemberVO();
-					// 데이터 꺼내서 채우고
-					mVO.setMno(rs.getInt("mno"));
-					mVO.setName(rs.getString("name"));
-					mVO.setId(rs.getString("id"));
-					mVO.setPw(rs.getString("pw"));
-					mVO.setMail(rs.getString("mail"));
-					mVO.setTel(rs.getString("tel"));
-					
-					// 리스트에 VO 담고
-					list.add(mVO);
-				}
-			} catch(Exception e) {
-				e.printStackTrace();
-			} finally {
-				db.close(rs);
-				db.close(pstmt);
-				db.close(con);
+	// 회원번호(1001)를 입력하면 해당 회원의 정보를 출력해주는 함수
+	public ArrayList<MemberVO> getMnoInfo(int mno){
+		// 반환값 변수
+		ArrayList<MemberVO> list = new ArrayList<MemberVO>();
+		
+		// 커넥션 연결하고
+		con = db.getCon();
+		
+		// 질의명령 가져오고
+		String sql = mSQL.getSQL(mSQL.SEL_MNO);
+		
+		// 명령전달도구 준비하고
+		pstmt = db.getPstmt(con, sql);
+		
+		try {
+			// 질의명령 완성하고
+			pstmt.setInt(1, mno);
+			// 질의명령 보내고 결과 받고
+			rs = pstmt.executeQuery();
+			// 데이터 꺼내고
+			while(rs.next()) {
+				// 한명분 데이터 저장할 VO 만들고
+				MemberVO mVO = new MemberVO();
+				// 데이터 꺼내서 채우고
+				mVO.setMno(rs.getInt("mno"));
+				mVO.setName(rs.getString("name"));
+				mVO.setId(rs.getString("id"));
+				mVO.setPw(rs.getString("pw"));
+				mVO.setMail(rs.getString("mail"));
+				mVO.setTel(rs.getString("tel"));
+				mVO.setJdate(rs.getDate("jdate"));
+				mVO.setSdate();
+				
+				// 리스트에 VO 담고
+				list.add(mVO);
 			}
-			
-			return list;
+		} catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			db.close(rs);
+			db.close(pstmt);
+			db.close(con);
 		}
 		
+		return list;
+	}
+		
 		// 아이디를 입력해서 해당 회원의 전화번호를 수정(010-1212-1212)해주는 함수
-		public int updateTel(String id) {
+		public int updateTel(String id, String tel) {
 			// 할일
 			// 반환값 변수
 			int cnt = 0;
@@ -139,14 +141,19 @@ public class MemberDao {
 			
 			try {
 				// 질의명령 완성하고
-				pstmt.setString(1, id);
-				pstmt.setString(2, tel);
+				pstmt.setString(1, tel);
+				pstmt.setString(2, id);
 				
-			} catch(Exception e) {
+				// 질의명령 보내고 결과 받고
+				cnt = pstmt.executeUpdate();
+				
+				} catch(Exception e) {
 				e.printStackTrace();
 			} finally {
 				db.close(pstmt);
 				db.close(con);
 			}
+			
+			return cnt;
 		}
 }
