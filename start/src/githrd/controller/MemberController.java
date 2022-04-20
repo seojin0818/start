@@ -54,8 +54,8 @@ public class MemberController {
 		mDao.updateTel("jennie", "010-1212-1212");
 	}
 	
-	// [ 선택 ] Scanner 로 회원정보를 입력받아서 회원가입을 처리해주는 함수
-	
+	// [ 선택 ] Scanner로 회원정보를 입력받아서 회원가입을 처리해주는 함수
+	Scanner sc = new Scanner(System.in);
 	
 	public static void main(String[] args) {
 		new MemberController();

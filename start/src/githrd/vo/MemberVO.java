@@ -6,7 +6,7 @@ import java.text.SimpleDateFormat;
 public class MemberVO {
 	
 	private int mno;
-	private String name, id, pw, mail, tel, sdate;
+	private String name, id, pw, mail, tel, sdate, gen;
 	private Date jdate;
 	public int getMno() {
 		return mno;
@@ -45,6 +45,12 @@ public class MemberVO {
 		this.tel = tel;
 	}
 	
+	public String getGen() {
+		return gen;
+	}
+	public void setGen(String gen) {
+		this.gen = gen;
+	}
 	public String getSdate() {
 		return sdate;
 	}
@@ -61,10 +67,11 @@ public class MemberVO {
 	public void setJdate(Date jdate) {
 		this.jdate = jdate;
 	}
+	
 	@Override
 	public String toString() {
 		return "MemberVO [mno=" + mno + ", name=" + name + ", id=" + id + ", pw=" + pw + ", mail=" + mail + ", tel="
-				+ tel + ", sdate=" + sdate + ", jdate=" + jdate + "]";
+				+ tel + ", sdate=" + sdate + ", gen=" + gen + ", jdate=" + jdate + "]";
 	}
 
 }

@@ -1,7 +1,7 @@
 package githrd.dao;
 
 import java.sql.*;
-import java.util.ArrayList;
+import java.util.*;
 
 import githrd.db.*;
 import githrd.sql.*;
@@ -154,6 +154,47 @@ public class MemberDao {
 				db.close(con);
 			}
 			
+			return cnt;
+		}
+		
+		// [ 선택 ] Scanner로 회원정보를 입력받아서 회원가입을 처리해주는 함수
+		public int getJoin(MemberVO mVO) {
+			// 할 일
+			
+			// 반환값 변수
+			int cnt = 0;
+			
+			// 커넥션
+			con = db.getCon();
+			// 질의명령
+			String sql = mSQL.getSQL(mSQL.INSERT_MEMB);
+			// 명령전달도구
+			pstmt = db.getPstmt(con, sql);
+			try {
+				// 질의명령 완성
+				String name = mVO.getName();
+				String id = mVO.getId();
+				String pw = mVO.getPw();
+				String mail = mVO.getMail();
+				String tel = mVO.getTel();
+				String gen = mVO.getGen();
+				
+				pstmt.setString(1, name);
+				pstmt.setString(2, id);
+				pstmt.setString(3, pw);
+				pstmt.setString(4, mail);
+				pstmt.setString(5, tel);
+				pstmt.setString(6, gen);
+				
+				// 질의명령 보내고 결과 받고
+				cnt = pstmt.executeUpdate();
+				
+			} catch(Exception e) {
+				e.printStackTrace();
+			} finally {
+				db.close(pstmt);
+				db.close(con);
+			}
 			return cnt;
 		}
 }
