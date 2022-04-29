@@ -58,7 +58,17 @@ public class MemberController {
 	public void getJoin(MemberVO mVO) {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("가입정보를 입력하세요!\n이름 : \n아이디 : \n비밀번호 : \n이메일 : \n전화번호 : \n성별 : ");
-		String str = sc.nextLine();
+		String name = sc.nextLine();
+		System.out.print("아이디 : ");
+		String id = sc.nextLine();
+		System.out.print("비밀번호 : ");
+		String pw = sc.nextLine();
+		System.out.print("이메일 : ");
+		String mail = sc.nextLine();
+		System.out.print("전화번호 : ");
+		String tel = sc.nextLine();
+		System.out.print("성별 : ");
+		String gen = sc.nextLine();
 	
 		// 데이터베이스 작업 함수 호출
 		int result = mDao.getJoin(mVO);
@@ -89,6 +99,7 @@ public class MemberController {
 	 		시작 페이지는 4페이지가 되고 종료 페이지는 6페이지가 되어야 한다.
 	 		
 	 */
+	
 	public static void main(String[] args) {
 		new MemberController();
 	}
