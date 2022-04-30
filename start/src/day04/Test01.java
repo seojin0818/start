@@ -1,30 +1,32 @@
 package day04;
 
 /*
-	정수 하나를 입력 받아서
- 	이 수가 0 인지 홀수인지 짝수인지를 판별하세요.
+	
+	문제 ]  정수 하나를 입력 받아서
+ 			이 수가 0 인지 홀수인지 짝수인지를 판별하세요.
  	
  	참고 ]
+ 	
  		조건문
  		
  		if(조건식) {
  			// 조건식이 참일 경우 실행하는 부분
  			실행내용
  		}
+ 		
  */
 
 import java.util.*;
-// 이렇게 사용할 클래스의 경로를 지정하면 java.util 패키지 하위에 바로 속한 클래스만 사용할 준비를 하게 됨
 
 public class Test01 {
 	public static void main(String[] args) {
 	// 진입점 함수
 		
-		// 할일
-		// 1) 입력 도구 준비
+		// 할 일
+		// 1) 입력 도구 준비하기
 		Scanner sc = new Scanner(System.in);
 		
-		// 2) 입력 받기 전 입력 메세지 출력
+		// 2) 입력 받기 전 입력 메세지 출력하기
 		System.out.print("정수 입력 : ");
 		// System.out.print(내용);
 		// 내용 출력 + 줄 바꿈 x
@@ -32,7 +34,7 @@ public class Test01 {
 		// 3) 입력 받고 정수를 변수에 기억시키기
 		int num = sc.nextInt();
 		
-		// 4) 조건에 따라 판별
+		// 4) 조건에 따라 판별하기
 		String soo = "[영]";
 		
 		// 홀수인 경우
@@ -45,7 +47,7 @@ public class Test01 {
 			soo = "짝수";
 		}
 		
-		// 5) 최종 출력
+		// 5) 최종 출력하기
 		System.out.println("입력 받은 정수 : " + num + " 은 " + soo + "입니다.");
 		// Systsem.out.println(내용);
 		// 내용 출력 + 줄 바꿈
