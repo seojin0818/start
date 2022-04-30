@@ -1,18 +1,18 @@
 package day05;
 
 /*
+ 	
  	정수를 입력 받아서
 
  	그 숫자가 짝수인지 홀수인지를 판별해서 출력하세요.
  	
  	단, 0인 경우는 0으로 출력하세요.
  	
- 	if ~ else 구문으로 처리
+ 	if ~ else 구문으로 처리하세요.
  	
  */
 
 import java.util.*;
-//이렇게 사용할 클래스의 경로를 지정하면 java.util 패키지 하위에 바로 속한 클래스만 사용할 준비를 하게 됨
 
 public class Test03 {
 	public static void main(String[] args) {
