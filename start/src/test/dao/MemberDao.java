@@ -5,7 +5,7 @@ import java.util.*;
 
 import test.db.*;
 import test.sql.*;
-import test.vo.MemberVO;
+import test.vo.*;
 
 public class MemberDao {
 
@@ -23,8 +23,8 @@ public class MemberDao {
 	}
 	
 	// 회원번호를 입력하면 해당 회원의 아이디, 이름, 이메일을 출력해주는 함수
-	public ArrayList<MemberVO> getMembInfo(int mno) {
-		ArrayList<MemberVO> list = new ArrayList<MemberVO>();
+	public MemberVO getMembInfo(int mno) {
+		MemberVO mVO = new MemberVO();
 		con = db.getCon();
 		String sql = mSQL.getSQL(mSQL.SEL_MEMBER_INFO);
 		pstmt = db.getPstmt(con, sql);
@@ -32,12 +32,9 @@ public class MemberDao {
 			pstmt.setInt(1, mno);
 			rs = pstmt.executeQuery();
 			while(rs.next()) {
-				MemberVO mVO = new MemberVO();
 				mVO.setId(rs.getString("id"));
 				mVO.setName(rs.getString("name"));
 				mVO.setMail(rs.getString("mail"));
-				
-				list.add(mVO);
 			}
 		} catch(Exception e) {
 			e.printStackTrace();
@@ -47,6 +44,6 @@ public class MemberDao {
 			db.close(con);
 		}
 		
-		return list;
+		return mVO;
 	}
 }

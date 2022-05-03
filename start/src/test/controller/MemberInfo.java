@@ -2,33 +2,34 @@ package test.controller;
 
 import java.util.*;
 
-import githrd.vo.MemberVO;
-import test.dao.MemberDao;
 import test.vo.*;
+import test.dao.*;
 
 public class MemberInfo {
 	private MemberDao mDao;
+	private MemberVO mVO;
 	
 	public MemberInfo() {
+		
 		mDao = new MemberDao();
 		Scanner sc = new Scanner(System.in);
+		System.out.print("회원번호를 입력하세요! : ");
+		int mno = sc.nextInt();
 
 		// 회원번호를 입력하면 해당 회원의 정보를 출력해주는 함수
-		ArrayList<MemberVO> list = mDao.getMembInfo(sc);
-		mnoInfoPrint(list);
-		System.out.println();
+		MemberVO mvo = mDao.getMembInfo(mno);
+		mnoInfoPrint(mvo);
 	}
 	
-	public void mnoInfoPrint(ArrayList<MemberVO> list) {
-		System.out.println("*** 회원 정보조회");
-		System.out.println("-----------------------");
-		System.out.println("아이디 | 이름 | 메일");
+	public void mnoInfoPrint(MemberVO mVO) {
+		System.out.println("### 회원 정보조회");
 		System.out.println("----------------------");
-		for(MemberVO mVO : list) {
-			System.out.printf("%10s | %10s | %10s \n", 
-					mVO.getId(), mVO.getName(), mVO.getMail());
-		}
-		System.out.println("----------------------");
+		System.out.println("아이디 : " + mVO.getId());
+		System.out.println("이름 : " + mVO.getName());
+		System.out.println("메일 : " + mVO.getMail());
 	}
 
+	public static void main(String[] args) {
+		new MemberInfo();
+	}
 }
